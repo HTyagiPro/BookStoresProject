@@ -1,0 +1,74 @@
+.container {
+    height: 65vh;
+}
+
+.searchBook{
+
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    margin-top: 7%;
+    left: auto;
+    background-color: blanchedalmond;
+    text-indent: 5px;
+    box-shadow: 10px 10px 25px #E6B0AA;
+    box-sizing: border-box;
+    border-color: brown;
+    padding: 1rem 20px;
+    
+    font-family: cursive;
+    border-radius: 30px;
+}
+
+.searchBook #search{
+    border-color: #641E16;
+    color: #641E16;
+    display: flex;
+    margin-left: 35%;
+    opacity: 80%;   
+    text-align: center; 
+    margin-top: 10%;
+    
+}
+
+
+.searchBook #search:hover{
+    color: aliceblue;
+    background-color: #641E16 ;
+    opacity: 80%;
+}
+
+.container {
+    height: 65vh;
+}
+
+#bookShelf {
+    width: 75%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
+    margin-top: auto;
+    left: auto;
+    background-color: blanchedalmond;
+    text-indent: 5px;
+    box-shadow: 10px 10px 25px #E6B0AA;
+    box-sizing: border-box;
+    border-color: brown;
+    padding: 1rem 20px;
+    font-family: cursive;
+    border-radius: 30px;
+}
+
+
+#bookShelf tr,th, td{
+    line-height: 70px;
+    align-self: start;
+}
+
+#bookShelf img{
+    height: 200px;
+    width: 150px;
+}

@@ -1,0 +1,10 @@
+<div class="addPublisher" method="post">
+    <h3 align="center">Add Publisher</h3><br>
+      <form #addPublisherForm="ngForm" (ngSubmit)="formSubmit(addPublisherForm)">
+          <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Publisher Name</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Publisher Name" ngModel name="publisherName">
+            </div>
+            <input id="add" type="submit" class="btn btn-outline-dark" value="Add Publisher" >
+          </form>
+      </div>

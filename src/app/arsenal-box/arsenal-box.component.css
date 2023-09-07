@@ -1,0 +1,27 @@
+.box{
+    height: 740px;
+    border: 3px solid brown;
+    border-radius: 0px 0px 30px 30px;
+    background-color: blanchedalmond;
+    min-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    text-align: center;
+}   
+
+.box h2{
+    margin-top: 320px;
+    opacity: 70%;
+    font-family: cursive;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: brown;
+}
+
+.box p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 90%;
+    font-weight: bold;
+    font-size: large;
+}

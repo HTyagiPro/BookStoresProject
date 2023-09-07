@@ -1,0 +1,41 @@
+.container {
+    height: 65vh;
+}
+.addBook{
+
+    width: 30%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
+    margin-top: 7%;
+    left: auto;
+    background-color: blanchedalmond;
+    text-indent: 5px;
+    box-shadow: 10px 10px 25px #E6B0AA;
+    box-sizing: border-box;
+    border-color: brown;
+    padding: 1rem 20px;
+    
+    font-family: cursive;
+    border-radius: 30px;
+}
+
+.addBook #add{
+    border-color: #641E16;
+    color: #641E16;
+    display: inline;
+    margin-left: 2%;
+    opacity: 80%;    
+    margin-top: 3%;
+    width: 25%;
+}
+
+
+.addBook #add:hover{
+    color: aliceblue;
+    background-color: #641E16 ;
+    opacity: 80%;
+}
+
+

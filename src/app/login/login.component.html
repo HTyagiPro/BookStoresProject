@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="login" method="post">
+    <h3 align="center">Log In</h3><br>
+      <form #loginForm="ngForm" (ngSubmit)="formSubmit(loginForm)">
+          <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Username</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username" ngModel name="username">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput2" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="Password"  ngModel name="password">
+            </div>
+            <input id="log" type="submit" class="btn btn-outline-dark" value="Log In" >
+          </form>
+      </div>
+</div>

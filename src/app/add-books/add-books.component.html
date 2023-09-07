@@ -1,0 +1,67 @@
+<div class="addBook" method="post">
+    <h3 align="center">Add Book</h3><br>
+    <form #addBookForm="ngForm" (ngSubmit)="formSubmit(addBookForm)" >
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title" ngModel name="title" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Category</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Category" ngModel name="category">
+          </div>
+          
+          <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label">Price</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Price" ngModel name="price">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput6" class="form-label">Page Count</label>
+            <input type="text" class="form-control" id="exampleFormControlInput6" placeholder="Page Count" ngModel name="pages">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput4" class="form-label">ISBN Code</label>
+            <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="ISBN Code" ngModel name="isbncode">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput5" class="form-label">Published Year</label>
+            <input type="email" class="form-control" id="exampleFormControlInput5" placeholder="Published Year" ngModel name="publishedYear">
+          </div>
+          
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Author</label>
+            <select class="form-select" id="validationCustom04" required ngModel name="author" >
+              <option selected disabled value="">Choose...</option>
+                <option value="{{a.authorID}}"  *ngFor="let a of authorArr">{{a.authorName}}</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid Author.
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Publisher</label>
+            <select class="form-select" id="validationCustom05" required ngModel name="publisher" >
+              <option selected disabled value="">Choose...</option>
+                <option value="{{p.publisherID}}" *ngFor="let p of publisherArr">{{p.publisherName}}</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid Publisher.
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="validationCustom06" class="form-label">Condition</label>
+            <select class="form-select" id="validationCustom06" required ngModel name="condition" >
+              <option selected disabled value="">Choose...</option>
+                <option>New</option>
+                <option>Used</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid Book Condition.
+            </div>
+          </div>
+
+          <input id="add" type="submit" class="btn btn-outline-dark" value="Add Book">
+          
+        </form>
+    </div>

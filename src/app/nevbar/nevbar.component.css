@@ -1,0 +1,13 @@
+.nevbar{
+    text-decoration: none;
+    width: 100%;
+    font-size: medium;
+    font-weight:bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 80%;
+    
+}
+
+.navbar-brand{
+    font-family: cursive;
+}

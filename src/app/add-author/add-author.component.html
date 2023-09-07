@@ -1,0 +1,10 @@
+<div class="addAuthor" method="post">
+    <h3 align="center">Add Author</h3><br>
+      <form #addAuthorForm="ngForm" (ngSubmit)="formSubmit(addAuthorForm)">
+          <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Author Name</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Author Name" ngModel name="authorName">
+            </div>
+            <input id="add" type="submit" class="btn btn-outline-dark" value="Add Author" >
+          </form>
+      </div>
