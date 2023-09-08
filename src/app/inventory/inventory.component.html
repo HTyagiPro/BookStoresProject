@@ -1,0 +1,63 @@
+<div class="container">
+<div class="inventory" method="post">
+    <h3 align="center">Update Stocks</h3><br>
+    <form #inventoryUpdate="ngForm" (ngSubmit)="formSubmit(inventoryUpdate)">
+
+        <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Books</label>
+            <select class="form-select" id="validationCustom05" required ngModel name="book" >
+              <option selected disabled value="">Choose...</option>
+                <option value="{{b.bookID}}" *ngFor="let b of books">{{b.title}}</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid Book.
+            </div>
+          </div>
+          <br>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Stock Level Used</label>
+            <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="Quantity of Used Books" ngModel name="used">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput4" class="form-label">Stock Level New</label>
+            <input type="number" class="form-control" id="exampleFormControlInput4" placeholder="Quantity of New Books" ngModel name="new">
+          </div>
+          <input id="update" type="submit" class="btn btn-outline-dark" value="Update Inventory">
+          
+        </form>
+    </div>
+</div>
+
+
+
+<div id = "bookShelf">
+    <h3 align="center">Books in Inventory</h3><br>
+    <table  class="table table-success table-striped">
+        <tr class="table-success">
+            <th>Cover Photo</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>Price</th>
+            <th>ISBN Code</th>
+            <th>Published Year</th>
+            <th>Used</th>
+            <th>New</th>
+        </tr>
+    <tr *ngFor="let i of inventory" class="table-success">
+        <td><img src="{{i.book.images}}" alt="" href="/"/></td>
+        <td>{{i.book.title}}</td>
+        <td>{{i.book.author.authorName}}</td>
+        <td>{{i.book.publisher.publisherName}}</td>
+        <td>{{i.book.price}}</td>
+        <td>{{i.book.isbncode}}</td>
+        <td>{{i.book.publishedYear}}</td>
+        <td>{{i.stockLevelUsed}}</td>
+        <td>{{i.stockLevelNew}}</td>
+        
+        
+    </tr>
+    </table>
+</div>
+

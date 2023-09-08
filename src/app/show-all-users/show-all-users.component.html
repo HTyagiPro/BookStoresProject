@@ -1,0 +1,26 @@
+<div id = "allUsers">
+    <h3 align="center">All Users</h3><br>
+    <table  class="table table-success table-striped">
+        <tr class="table-success">
+            <th>User ID</th>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Role</th>
+            <th>Status</th>
+        </tr>
+    <tr *ngFor="let u of users" class="table-success">
+        <td>{{u.userID}}</td>
+        <td>{{u.username}}</td>
+        <td>{{u.name}}</td>
+        <td>{{u.address}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.phoneNo}}</td>
+        <td>{{u.role}}</td>
+        <td>{{u.status}}</td>
+    </tr>
+    </table>
+</div>
+

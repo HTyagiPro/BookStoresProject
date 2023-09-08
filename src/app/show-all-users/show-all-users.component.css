@@ -2,7 +2,7 @@
     height: 65vh;
 }
 
-#bookShelf {
+#allUsers {
     width: 75%;
     height: auto;
     margin-left: auto;
@@ -21,17 +21,17 @@
 }
 
 
-#bookShelf tr,th, td{
+#allUsers tr,th, td{
     line-height: 70px;
     align-self: start;
 }
 
-#bookShelf img{
+#allUsers img{
     height: 200px;
     width: 150px;
 }
 
-#bookShelf h3{
+#allUsers h3{
     text-decoration: solid;
     font-weight: bolder;
 }

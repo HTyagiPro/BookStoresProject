@@ -1,30 +1,30 @@
-
-<div id = "bookShelf">
-    <table  class="table table-success table-striped">
-        <tr class="table-success">
-            <th>Cover Photo</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Publisher</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>ISBN Code</th>
-            <th>Published Year</th>
-            <th>Book Condition</th>
+    <div id = "bookShelf">
+        <h3 align="center">All Books</h3><br>
+        <table  class="table table-success table-striped">
+            <tr class="table-success">
+                <th>Cover Photo</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>ISBN Code</th>
+                <th>Published Year</th>
+                <th>Book Condition</th>
+            </tr>
+        <tr *ngFor="let b of books" class="table-success">
+            <td><img src="{{b.images}}" alt="" href="/"/></td>
+            <td>{{b.title}}</td>
+            <td>{{b.author.authorName}}</td>
+            <td>{{b.publisher.publisherName}}</td>
+            <td>{{b.category}}</td>
+            <td>{{b.price}}</td>
+            <td>{{b.isbncode}}</td>
+            <td>{{b.publishedYear}}</td>
+            <td>{{b.bookCondition}}</td>
         </tr>
-    <tr *ngFor="let b of books" class="table-success">
-        <td><img src="{{b.images}}" alt="" href="/"/></td>
-        <td>{{b.title}}</td>
-        <td>{{b.author.authorName}}</td>
-        <td>{{b.publisher.publisherName}}</td>
-        <td>{{b.category}}</td>
-        <td>{{b.price}}</td>
-        <td>{{b.isbncode}}</td>
-        <td>{{b.publishedYear}}</td>
-        <td>{{b.bookCondition}}</td>
-    </tr>
-    </table>
-</div>
+        </table>
+    </div>
 
 
 

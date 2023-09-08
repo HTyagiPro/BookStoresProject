@@ -23,6 +23,13 @@ import { AddPublisherService } from './add-publisher/add-publisher.service';
 import { PlaceOrderComponent } from './place-order/place-order.component';
 import { SearchBooksComponent } from './search-books/search-books.component';
 import { SearchBooksService } from './search-books/search-books.service';
+import { ShowAllCustomersComponent } from './show-all-customers/show-all-customers.component';
+import { ShowAllUsersComponent } from './show-all-users/show-all-users.component';
+import { CustomerService } from './show-all-customers/show-all-customers.service';
+import { UserService } from './show-all-users/show-all-users.service';
+import { PlaceOrderService } from './place-order/place-order.service';
+import { InventoryComponent } from './inventory/inventory.component';
+import { InventoryService } from './inventory/inventory.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +46,10 @@ import { SearchBooksService } from './search-books/search-books.service';
     AddPublisherComponent,
     AddCustomerComponent,
     PlaceOrderComponent,
-    SearchBooksComponent
+    SearchBooksComponent,
+    ShowAllCustomersComponent,
+    ShowAllUsersComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +57,17 @@ import { SearchBooksService } from './search-books/search-books.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [LoginService,BookService, AddBookService, AddAuthorService,AddPublisherService, SearchBooksService],
+  providers: [LoginService,
+              BookService, 
+              AddBookService, 
+              AddAuthorService,
+              AddPublisherService, 
+              SearchBooksService, 
+              CustomerService,
+              UserService,
+              PlaceOrderService,
+              InventoryService
+            ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

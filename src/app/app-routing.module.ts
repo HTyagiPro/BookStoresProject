@@ -9,19 +9,25 @@ import { AddAuthorComponent } from './add-author/add-author.component';
 import { AddPublisherComponent } from './add-publisher/add-publisher.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { SearchBooksComponent } from './search-books/search-books.component';
+import { ShowAllCustomersComponent } from './show-all-customers/show-all-customers.component';
+import { ShowAllUsersComponent } from './show-all-users/show-all-users.component';
+import { PlaceOrderComponent } from './place-order/place-order.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 const routes: Routes = [
   {component:LoginComponent, path:""},
   {component:SignupComponent, path:"app-signup"},
   {component:BookShelfComponent, path:"app-book-shelf"},
   {component:AddBooksComponent, path:"app-add-books"},
+  {component:ShowAllCustomersComponent, path:"app-show-all-customers"},
+  {component:ShowAllUsersComponent, path:"app-show-all-users"},
   {component:SearchBooksComponent, path:"app-search-books"},
+  {component:InventoryComponent, path:"app-inventory"},
   {component: AddAuthorComponent, path:"app-add-author"},
   {component: AddPublisherComponent, path:"app-add-publisher"},
+  {component: PlaceOrderComponent, path:"app-place-order"},
   {component: AddCustomerComponent, path:"app-add-customer"},
   {component:ArsenalBoxComponent, path:"app-arsenal-box"}
-
-
 
   
 ];

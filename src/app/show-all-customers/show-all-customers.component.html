@@ -1,0 +1,20 @@
+    <div id = "allCustomers">
+        <h3 align="center">All Customers</h3><br>
+        <table  class="table table-success table-striped">
+            <tr class="table-success">
+                <th>Customer ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+            </tr>
+        <tr *ngFor="let c of customers" class="table-success">
+            <td>{{c.customerID}}</td>
+            <td>{{c.custName}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.custAddress}}</td>
+            <td>{{c.contactNo}}</td>
+        </tr>
+        </table>
+    </div>
+
