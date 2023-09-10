@@ -21,14 +21,14 @@ export class InventoryComponent implements OnInit {
     this.error = JSON.stringify(error.error.text);
     if (error.status == 200)
     {
-      window.localStorage.setItem("token", error.error.text);
-      alert("Inventory Updated Successfully.");
-      this.router.navigateByUrl('/app-arsenal-box');
-
+      
+      window.alert("Inventory Updated Successfully.");
+      window.location.reload();
+    
     }else {
       alert("Wrong Credintials.");
     }
-  }) 
+  });
   }
 
   books:any[] = [];

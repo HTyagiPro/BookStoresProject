@@ -1,5 +1,4 @@
-<div class="container">
-<div class="placeOrder" method="post">
+<div class="placeOrder" method="post" *ngIf="flag == false">
     <h3 align="center">Place Order</h3><br>
     <form #placeOrder="ngForm" (ngSubmit)="formSubmit(placeOrder)">
           
@@ -33,7 +32,7 @@
                   Please select a valid Book.
                 </div>
                 </div>
-
+                <br>
                 <div class="col-md-3">
                   <label for="validationCustom06" class="form-label">Condition</label>
                   <select class="form-select" id="validationCustom06" required ngModel name="condition" >
@@ -53,11 +52,88 @@
             </div>
 
 
-          <input id="place" type="submit" class="btn btn-outline-dark" value="Place Order">
+          <input id="place" type="submit" class="btn btn-outline-dark" value="Make Payment">
           
         </form>
     </div>
+
+
+<div id = "bookShelf" *ngIf="flag">
+  <h3 align="center">Order Details</h3><br>
+  <table  class="table table-success table-striped">
+    <tr class="table-success">
+      <th>Order ID</th>
+      <td>:</td>
+      <td>{{orderDetails.orderID}}</td>
+    </tr>
+    <tr class="table-success">
+      <th>Name</th>
+      <td>:</td>
+      <td>{{orderDetails.cust_Name}}</td>
+    </tr>
+    <tr class="table-success">
+      <th>Email</th>
+      <td>:</td>
+      <td>{{orderDetails.email}}</td>
+    </tr>
+    <tr class="table-success">
+      <th>Book Title</th>
+      <td>:</td>
+      <td>{{orderDetails.title}}</td>
+      </tr>
+    <tr class="table-success">
+      <th>ISBN Code</th>
+      <td>:</td>
+      <td>{{orderDetails.isbnCode}}</td>
+      </tr>
+    <tr class="table-success">
+      <th>Unit Price</th>
+      <td>:</td>
+      <td>{{orderDetails.price}}</td>
+    </tr>
+      <tr class="table-success">
+        <th>Quantity</th>
+        <td>:</td>
+        <td>{{orderDetails.quantity}}</td>
+      </tr>
+      <tr class="table-success">
+        <th>Tax Amount</th>
+        <td>:</td>
+        <td>{{orderDetails.tax_Amount}}</td>
+      </tr>
+      <tr class="table-success">
+        <th>Discount Amount</th>
+        <td>:</td>
+        <td>{{orderDetails.discount_Amount}}</td>
+      </tr>
+      <tr class="table-success">
+        <th>Total Amount</th>
+        <td>:</td>
+        <td>{{orderDetails.amount}}</td>
+      </tr>
+      <tr class="table-success">
+        <th>Shipping Address</th>
+        <td>:</td>
+        <td>{{orderDetails.shipping_Address}}</td>
+      </tr>
+      <tr class="table-success">
+        <th>Order Date</th>
+        <td>:</td>
+        <td>{{orderDetails.order_Date|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+      </tr>
+      <tr class="table-success">
+        <th>Payment Status</th>
+        <td>:</td>
+        <td>{{orderDetails.status}}</td>
+      </tr>
+      <tr class="table-success">
+        <th>Payment Date</th>
+        <td>:</td>
+        <td>{{orderDetails.payment_date|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+      </tr>   
+  </table>
 </div>
+
 
 
 <!--

@@ -1,4 +1,4 @@
-<div class="addAuthor" method="post">
+<div class="addAuthor" method="post" *ngIf="flag == false">
     <h3 align="center">Add Author</h3><br>
       <form #addAuthorForm="ngForm" (ngSubmit)="formSubmit(addAuthorForm)">
           <div class="mb-3">
@@ -7,4 +7,25 @@
             </div>
             <input id="add" type="submit" class="btn btn-outline-dark" value="Add Author" >
           </form>
+      </div>
+
+      <div id = "bookShelf" *ngIf="flag==true">
+        <h3 align="center">Added Author Details</h3><br>
+        <table  class="table table-success table-striped">
+          <tr class="table-success">
+            <th>Author ID</th>
+            <td>:</td>
+            <td>{{author.authorID}}</td>
+          </tr>
+          <tr class="table-success">
+            <th>Name</th>
+            <td>:</td>
+            <td>{{author.authorName}}</td>
+          </tr>
+          <tr class="table-success">
+            <th>Author Added On</th>
+            <td>:</td>
+            <td>{{author.recordCreatedOn|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+          </tr>  
+        </table>
       </div>

@@ -20,7 +20,7 @@ export class BookShelfComponent implements OnInit {
         this.error = JSON.stringify(error.error.text);
         if (error.status == 200)
         {
-          window.localStorage.setItem("token", error.error.text);
+          //window.localStorage.setItem("token", error.error.text);
         }else {
           alert("Wrong Credintials.");
         }

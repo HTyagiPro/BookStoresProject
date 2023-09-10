@@ -15,18 +15,25 @@ export class PlaceOrderComponent {
     books:any[] = [];
     data: any;
     error:any;
+    flag : boolean = false;
+    orderDetails:any;
     public formSubmit(orderForm:NgForm){
       this.placeOrderService.placeOrder(orderForm.value).subscribe((data:any)=> this.data = data, 
     error => { 
       this.error = JSON.stringify(error.error.text);
       if (error.status == 200)
       {
-        window.localStorage.setItem("token", error.error.text);
-        alert("Order Placed Successfully.")
-        this.router.navigateByUrl('/app-arsenal-box');
+        
+        window.alert("Order Placed Successfully.");
+        //window.location.reload();
+        this.placeOrderService.getplacedOrderDetails().subscribe((data:any)=> this.orderDetails = data);
+        
+        this.flag = true;
+
+        this.router.navigateByUrl('/https://rzp.io/l/arsenalPay');
 
       }else {
-        alert("Wrong Credintials.");
+        alert("Something Went Wrong...Try again after sometime.");
       }
     }) 
     }

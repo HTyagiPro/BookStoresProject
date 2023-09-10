@@ -1,0 +1,35 @@
+<div id = "bookShelf">
+    <h3 align="center">Order History</h3><br>
+    <table  class="table table-success table-striped">
+        <tr class="table-success">
+            <th>Order ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Book Title</th>
+            <th>ISBN Code</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Tax</th>
+            <th>Discount</th>
+            <th>Total Amt.</th>
+            <th>Order Date</th>
+            <th>Payment Status</th>
+            <th>Payment Date</th>
+        </tr>
+        <tr class="table-success" *ngFor="let o of orders">
+            <td>{{o.orderID}}</td>
+            <td>{{o.cust_Name}}</td>
+            <td>{{o.email}}</td>
+            <td>{{o.title}}</td>
+            <td>{{o.isbnCode}}</td>
+            <td>{{o.price}}</td>
+            <td>{{o.quantity}}</td>
+            <td>{{o.tax_Amount}}</td>
+            <td>{{o.amount}}</td>
+            <td>{{o.shipping_Address}}</td>
+            <td>{{o.order_Date|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+            <td>{{o.status}}</td>
+            <td>{{o.payment_date|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+        </tr>
+    </table>
+</div>

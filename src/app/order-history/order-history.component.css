@@ -1,9 +1,6 @@
-.container {
-    height: 65vh;
-}
 
 #bookShelf {
-    width: 85%;
+    width: auto;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -15,15 +12,19 @@
     box-shadow: 10px 10px 25px #E6B0AA;
     box-sizing: border-box;
     border-color: brown;
-    padding: 1rem 20px;
+    padding: 1rem 10px;
     font-family: cursive;
+    font-size: 12px;
+    text-align: center;
     border-radius: 30px;
 }
 
 
-#bookShelf tr,th, td{
-    line-height: 70px;
+#bookShelf table, tr,th, td{
+    line-height: 30px;
     align-self: start;
+    border: 1px solid brown;
+    border-radius: 30px;
 }
 
 #bookShelf img{
@@ -34,4 +35,5 @@
 #bookShelf h3{
     text-decoration: solid;
     font-weight: bolder;
+    font-size: large;
 }

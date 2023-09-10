@@ -3,8 +3,8 @@
 }
 .addAuthor{
 
-    width: 25%;
-    height: 50%;
+    width: 35%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 7%;
@@ -37,3 +37,41 @@
     opacity: 80%;
 }
 
+
+.container {
+    height: 65vh;
+}
+
+#bookShelf {
+    width: 75%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
+    margin-top: 7%;
+    left: auto;
+    background-color: blanchedalmond;
+    text-indent: 5px;
+    box-shadow: 10px 10px 25px #E6B0AA;
+    box-sizing: border-box;
+    border-color: brown;
+    padding: 1rem 20px;
+    font-family: cursive;
+    border-radius: 30px;
+}
+
+
+#bookShelf tr,th, td{
+    line-height: 30px;
+    align-self: start;
+}
+
+#bookShelf img{
+    height: 200px;
+    width: 150px;
+}
+
+#bookShelf h3{
+    text-decoration: solid;
+    font-weight: bolder;
+}

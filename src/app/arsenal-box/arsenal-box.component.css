@@ -11,7 +11,7 @@
 }   
 
 .box h2{
-    margin-top: 320px;
+    margin-top: auto;
     opacity: 70%;
     font-family: cursive;
     font-size: xx-large;
@@ -24,4 +24,16 @@
     opacity: 90%;
     font-weight: bold;
     font-size: large;
+}
+
+.box img{
+    display: flex;
+    height: 50%;
+    width: 30%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0%;
+    box-shadow: 10px 10px 25px burlywood;
+
 }

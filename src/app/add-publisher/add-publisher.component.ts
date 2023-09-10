@@ -12,15 +12,20 @@ export class AddPublisherComponent {
   constructor(private addAuthorService : AddPublisherService, private route: Router) {}
   data: any;
   error : any;
+  flag : boolean = false;
+  publisher:any;
   public formSubmit(addPublisher:NgForm){
     this.addAuthorService.addPublisher(addPublisher.value).subscribe((data:any)=> this.data = data, 
     error => { 
       this.error = JSON.stringify(error.error.text);
       if (error.status == 200)
       {
-        window.localStorage.setItem("token", error.error.text);
+        //window.localStorage.setItem("token", error.error.text);
         alert("Publisher Added Successfully!!!");
-        this.route.navigateByUrl('/');
+        this.flag = true;
+        this.addAuthorService.getAddedPublisher().subscribe((data:any)=> this.publisher= data);
+
+        //this.route.navigateByUrl('/');
       }else {
         alert("Wrong Credintials.");
       }

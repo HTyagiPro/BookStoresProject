@@ -4,11 +4,11 @@
 .placeOrder{
 
     width: 50%;
-
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: auto;
-    margin-top: 15%;
+    margin-bottom: 10%;
+    margin-top: 10%;
     left: auto;
     background-color: blanchedalmond;
     text-indent: 5px;
@@ -36,3 +36,39 @@
     opacity: 80%;
 }
 
+
+#bookShelf {
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
+    margin-top: 7%;
+    left: auto;
+    background-color: blanchedalmond;
+    text-indent: 5px;
+    box-shadow: 10px 10px 25px #E6B0AA;
+    box-sizing: border-box;
+    border-color: brown;
+    padding: 1rem 20px;
+    font-family: cursive;
+    text-align: center;
+    border-radius: 30px;
+}
+
+
+#bookShelf table,tr,th, td{
+    line-height: 30px;
+    align-self: start;
+}
+
+#bookShelf img{
+    height: 200px;
+    width: 150px;
+}
+
+#bookShelf h3{
+    text-decoration: solid;
+    font-weight: bolder;
+    
+}

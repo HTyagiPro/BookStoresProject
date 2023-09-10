@@ -12,15 +12,18 @@ export class AddAuthorComponent {
   constructor(private addAuthorService : AddAuthorService, private route: Router) {}
   data: any;
   error : any;
+  flag : boolean = false;
+  author : any;
   public formSubmit(addAuthor:NgForm){
-    console.log(addAuthor.value)
     this.addAuthorService.addAuthor(addAuthor.value).subscribe((data:any)=> this.data = data, 
     error => { 
       this.error = JSON.stringify(error.error.text);
       if (error.status == 200)
       {
-        window.localStorage.setItem("token", error.error.text);
-        this.route.navigateByUrl('/app-arsenal-box');
+        //window.localStorage.setItem("token", error.error.text);
+        this.flag = true;
+        this.addAuthorService.getAddedAuthor().subscribe((data:any)=> this.author = data);
+        //this.route.navigateByUrl('/app-arsenal-box');
       }else {
         alert("Wrong Credintials.");
       }

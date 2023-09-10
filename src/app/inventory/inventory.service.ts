@@ -10,7 +10,7 @@ export class InventoryService{
         this.httpClient = httpClient;
     }
 
-    updateInventory(inventoryForm: any) {
+    public updateInventory(inventoryForm: any) :Observable<any> {
         var header = new HttpHeaders().set("Authorization", "Bearer " + window.localStorage.getItem("token"));
         return this.httpClient.post("http://localhost:8089/inventory/updateInv",inventoryForm,{headers:header});
     }
