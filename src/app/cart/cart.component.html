@@ -17,9 +17,9 @@
             <td>{{o.customer.email}}</td>
             <td>{{o.book.title}}</td>
             <td>{{o.book.isbncode}}</td>
-            <td>{{o.book.price}}</td>
+            <td>{{o.book.price | currency : 'INR'}}</td>
             <td>{{o.quantity}}</td>
-            <td>{{o.recordCreatedOn|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+            <td>{{o.recordCreatedOn|date }}</td>
         </tr>
     </table>
 </div>

@@ -58,7 +58,7 @@
     </div>
 
 
-<div id = "bookShelf" *ngIf="flag">
+<div id = "bookShelf" *ngIf="true">
   <h3 align="center">Order Details</h3><br>
   <table  class="table table-success table-striped">
     <tr class="table-success">
@@ -89,7 +89,7 @@
     <tr class="table-success">
       <th>Unit Price</th>
       <td>:</td>
-      <td>{{orderDetails.price}}</td>
+      <td>{{orderDetails.price | currency : 'INR'}}</td>
     </tr>
       <tr class="table-success">
         <th>Quantity</th>
@@ -99,17 +99,17 @@
       <tr class="table-success">
         <th>Tax Amount</th>
         <td>:</td>
-        <td>{{orderDetails.tax_Amount}}</td>
+        <td>{{orderDetails.tax_Amount | currency : 'INR'}}</td>
       </tr>
       <tr class="table-success">
         <th>Discount Amount</th>
         <td>:</td>
-        <td>{{orderDetails.discount_Amount}}</td>
+        <td>{{orderDetails.discount_Amount | currency : 'INR'}}</td>
       </tr>
       <tr class="table-success">
         <th>Total Amount</th>
         <td>:</td>
-        <td>{{orderDetails.amount}}</td>
+        <td>{{orderDetails.amount | currency : 'INR'}}</td>
       </tr>
       <tr class="table-success">
         <th>Shipping Address</th>
@@ -119,7 +119,7 @@
       <tr class="table-success">
         <th>Order Date</th>
         <td>:</td>
-        <td>{{orderDetails.order_Date|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+        <td>{{orderDetails.order_Date|date}}</td>
       </tr>
       <tr class="table-success">
         <th>Payment Status</th>
@@ -129,7 +129,7 @@
       <tr class="table-success">
         <th>Payment Date</th>
         <td>:</td>
-        <td>{{orderDetails.payment_date|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+        <td>{{orderDetails.payment_date|date}}</td>
       </tr>   
   </table>
 </div>

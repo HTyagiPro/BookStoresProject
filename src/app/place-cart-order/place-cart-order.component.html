@@ -29,26 +29,6 @@
       <td>:</td>
       <td>{{orderDetails.email}}</td>
     </tr>
-    <tr class="table-success">
-      <th>Book Title</th>
-      <td>:</td>
-      <td>{{orderDetails.title}}</td>
-      </tr>
-    <tr class="table-success">
-      <th>ISBN Code</th>
-      <td>:</td>
-      <td>{{orderDetails.isbnCode}}</td>
-      </tr>
-    <tr class="table-success">
-      <th>Unit Price</th>
-      <td>:</td>
-      <td>{{orderDetails.price}}</td>
-    </tr>
-      <tr class="table-success">
-        <th>Quantity</th>
-        <td>:</td>
-        <td>{{orderDetails.quantity}}</td>
-      </tr>
       <tr class="table-success">
         <th>Tax Amount</th>
         <td>:</td>
@@ -62,7 +42,7 @@
       <tr class="table-success">
         <th>Total Amount</th>
         <td>:</td>
-        <td>{{orderDetails.amount}}</td>
+        <td>{{orderDetails.amount | currency:'inr'}}</td>
       </tr>
       <tr class="table-success">
         <th>Shipping Address</th>
@@ -72,7 +52,7 @@
       <tr class="table-success">
         <th>Order Date</th>
         <td>:</td>
-        <td>{{orderDetails.order_Date|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+        <td>{{orderDetails.order_Date|date}}</td>
       </tr>
       <tr class="table-success">
         <th>Payment Status</th>
@@ -82,7 +62,7 @@
       <tr class="table-success">
         <th>Payment Date</th>
         <td>:</td>
-        <td>{{orderDetails.payment_date|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+        <td>{{orderDetails.payment_date|date}}</td>
       </tr>   
   </table>
 </div>

@@ -60,6 +60,10 @@
 #bookShelf table,tr,th, td{
     line-height: 30px;
     align-self: start;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 40%;
+
 }
 
 #bookShelf img{

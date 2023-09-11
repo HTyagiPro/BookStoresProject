@@ -22,14 +22,14 @@
             <td>{{o.email}}</td>
             <td>{{o.title}}</td>
             <td>{{o.isbnCode}}</td>
-            <td>{{o.price}}</td>
+            <td>{{o.price | currency:'INR'}}</td>
             <td>{{o.quantity}}</td>
-            <td>{{o.tax_Amount}}</td>
-            <td>{{o.discount_Amount}}</td>
-            <td>{{o.amount}}</td>
-            <td>{{o.order_Date|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+            <td>{{o.tax_Amount | currency:'INR'}}</td>
+            <td>{{o.discount_Amount | currency:'INR'}}</td>
+            <td>{{o.amount | currency:'INR'}}</td>
+            <td>{{o.order_Date|date}}</td>
             <td>{{o.status}}</td>
-            <td>{{o.payment_date|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+            <td>{{o.payment_date|date}}</td>
         </tr>
     </table>
 </div>

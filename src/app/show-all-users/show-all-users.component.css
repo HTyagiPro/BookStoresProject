@@ -18,12 +18,15 @@
     padding: 1rem 20px;
     font-family: cursive;
     border-radius: 30px;
+    font-size: 12px;
 }
 
 
-#allUsers tr,th, td{
-    line-height: 70px;
+#allUsers table, tr,th, td{
+    line-height: 30px;
     align-self: start;
+    text-align: center;
+    border: 1px solid brown;
 }
 
 #allUsers img{
@@ -34,4 +37,5 @@
 #allUsers h3{
     text-decoration: solid;
     font-weight: bolder;
+    font-size: large;
 }

@@ -3,7 +3,7 @@
 }
 
 #bookShelf {
-    width: 85%;
+    width: 90%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -21,9 +21,11 @@
 }
 
 
-#bookShelf tr,th, td{
+#bookShelf table, tr,th, td{
     line-height: 70px;
     align-self: start;
+    text-align: center;
+    
 }
 
 #bookShelf #cover{

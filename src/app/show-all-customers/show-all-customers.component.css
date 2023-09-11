@@ -16,14 +16,17 @@
     box-sizing: border-box;
     border-color: brown;
     padding: 1rem 20px;
+    font-size: 12px;
     font-family: cursive;
     border-radius: 30px;
 }
 
 
-#allCustomers tr,th, td{
-    line-height: 70px;
+#allCustomers table, tr,th, td{
+    line-height: 30px;
     align-self: start;
+    text-align: center;
+    border: 1px solid brown;
 }
 
 #allCustomers img{
@@ -34,4 +37,5 @@
 #allCustomers h3{
     text-decoration: solid;
     font-weight: bolder;
+    font-size: large;
 }
