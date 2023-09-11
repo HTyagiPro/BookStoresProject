@@ -10,7 +10,7 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/app-book-shelf">Home</a>
                
-              
+              <!--Admin Services-->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Admin
@@ -27,9 +27,28 @@
                   <li><a class="dropdown-item" href="/app-order-history">Show Order History</a></li>
                 </ul>
               </li>
+              <!---->
 
-              <!-- logout -->
 
+
+              <!--Customer Services-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/app-search-books">Search</a></li>
+                  <li><a class="dropdown-item" href="/app-place-order">Place Order</a></li>
+                  <li><a class="dropdown-item" href="/app-place-cart-order">Place Cart Order</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/app-cart">View Cart</a></li>
+                </ul>
+              </li>
+              <!---->
+
+              
+
+              <!--Log In Sign Up-->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   LogIn/SignUp
@@ -38,12 +57,11 @@
                   <li><a class="dropdown-item" href="/" >User Log In </a></li>
                   <li><a class="dropdown-item" href="/app-signup">User Registration?</a></li>
                   <li><a class="dropdown-item" href="/" (click)="logout()">Log Out</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  
+                  <li><hr class="dropdown-divider"></li>      
                 </ul>
               </li>
-              <a class="nav-link active" aria-current="page" href="/app-search-books">Search</a>
-              <a class="nav-link active" aria-current="page" href="/app-place-order">Place Order</a>
+              <!---->
+
             </ul>
           </div>
         </div>

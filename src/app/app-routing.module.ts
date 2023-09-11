@@ -14,6 +14,8 @@ import { ShowAllUsersComponent } from './show-all-users/show-all-users.component
 import { PlaceOrderComponent } from './place-order/place-order.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { CartComponent } from './cart/cart.component';
+import { PlaceCartOrderComponent } from './place-cart-order/place-cart-order.component';
 
 const routes: Routes = [
   {component:LoginComponent, path:""},
@@ -24,14 +26,16 @@ const routes: Routes = [
   {component:ShowAllUsersComponent, path:"app-show-all-users"},
   {component:SearchBooksComponent, path:"app-search-books"},
   {component:InventoryComponent, path:"app-inventory"},
-  {component: AddAuthorComponent, path:"app-add-author"},
-  {component: AddPublisherComponent, path:"app-add-publisher"},
-  {component: PlaceOrderComponent, path:"app-place-order"},
-  {component: OrderHistoryComponent, path:"app-order-history"},
-  {component: AddCustomerComponent, path:"app-add-customer"},
+  {component:AddAuthorComponent, path:"app-add-author"},
+  {component:AddPublisherComponent, path:"app-add-publisher"},
+  {component:PlaceOrderComponent, path:"app-place-order"},
+  {component:PlaceCartOrderComponent, path:"app-place-cart-order"},
+  {component:CartComponent, path:"app-cart"},
+  {component:OrderHistoryComponent, path:"app-order-history"},
+  {component:AddCustomerComponent, path:"app-add-customer"},
   {component:ArsenalBoxComponent, path:"app-arsenal-box"}
 
-
+  
   
 ];
 

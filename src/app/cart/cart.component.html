@@ -1,0 +1,27 @@
+
+
+<div id = "bookShelf">
+    <h3 align="center">My Cart</h3><br>
+    <table  class="table table-success table-striped">
+        <tr class="table-success">
+            <th>Name</th>
+            <th>Email</th>
+            <th>Book Title</th>
+            <th>ISBN Code</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Item Added On</th>
+        </tr>
+        <tr class="table-success" *ngFor="let o of cartItems">
+            <td>{{o.customer.custName}}</td>
+            <td>{{o.customer.email}}</td>
+            <td>{{o.book.title}}</td>
+            <td>{{o.book.isbncode}}</td>
+            <td>{{o.book.price}}</td>
+            <td>{{o.quantity}}</td>
+            <td>{{o.recordCreatedOn|date:'dd-mm-yyyy hh:mm:ss'}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="container"></div>

@@ -1,58 +1,11 @@
 <div class="placeOrder" method="post" *ngIf="flag == false">
-    <h3 align="center">Place Order</h3><br>
-    <form #placeOrder="ngForm" (ngSubmit)="formSubmit(placeOrder)">
-          
-          <div class="mb-3">
-            <label for="exampleFormControlInput4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="Email" ngModel name="email">
-          </div>
-          <div class="col-md-3">
-            <label for="validationCustom05" class="form-label">Books</label>
-            <select class="form-select" id="validationCustom05" required ngModel name="book" >
-              <option selected disabled value="">Choose...</option>
-                <option value="{{b.bookID}}" *ngFor="let b of books">{{b.title}}</option>
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid Book.
-            </div>
-          </div>
-          <br>
-            <div class="mb-3">
-                <label for="exampleFormControlInput5" class="form-label">Quantity</label>
-                <input type="number" class="form-control" id="exampleFormControlInput5" placeholder="Item Quantity" ngModel name="quantity">
-            </div>
-
-            <div class="col-md-3">
-                <label for="validationCustom07" class="form-label">Tax(%)</label>
-                <select class="form-select" id="validationCustom07" required ngModel name="tax" >
-                  <option selected disabled value="">Choose...</option>
-                    <option value=18 >18</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid Book.
-                </div>
-                </div>
-                <br>
-                <div class="col-md-3">
-                  <label for="validationCustom06" class="form-label">Condition</label>
-                  <select class="form-select" id="validationCustom06" required ngModel name="condition" >
-                    <option selected disabled value="">Choose...</option>
-                      <option>New</option>
-                      <option>Used</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please select a valid Book Condition.
-                  </div>
-                </div>
-
-                <br>
+    <h3 align="center">Place Cart Order</h3><br>
+    <form #placeCartOrder="ngForm" (ngSubmit)="formSubmit(placeCartOrder)">
             <div class="mb-3">
                 <label for="exampleFormControlInput8" class="form-label">Shipping Address</label>
                 <input type="text" class="form-control" id="exampleFormControlInput8" placeholder="Shipping Address" ngModel name="address">
             </div>
-
-
-          <input id="place" type="submit" class="btn btn-outline-dark" value="Make Payment">
+          <input id="place" type="submit" class="btn btn-outline-dark" value="Make Payment" href="https://rzp.io/l/arsenalPay">
           
         </form>
     </div>

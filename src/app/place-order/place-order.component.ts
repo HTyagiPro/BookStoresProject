@@ -30,7 +30,7 @@ export class PlaceOrderComponent {
         
         this.flag = true;
 
-        this.router.navigateByUrl('/https://rzp.io/l/arsenalPay');
+        this.router.navigateByUrl('https://rzp.io/l/arsenalPay');
 
       }else {
         alert("Something Went Wrong...Try again after sometime.");

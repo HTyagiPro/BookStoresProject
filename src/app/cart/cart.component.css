@@ -1,5 +1,5 @@
 .container {
-    height: 65vh;
+    height: 50vh;
 }
 
 #bookShelf {
@@ -99,4 +99,21 @@ a {
   
   
   
-  
+  #bookShelf table, tr,th, td{
+    line-height: 30px;
+    align-self: start;
+    border: 1px solid brown;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#bookShelf img{
+    height: 200px;
+    width: 150px;
+}
+
+#bookShelf h3{
+    text-decoration: solid;
+    font-weight: bolder;
+    font-size: large;
+}
