@@ -36,6 +36,8 @@ import { CartComponent } from './cart/cart.component';
 import { CartService } from './cart/cart.service';
 import { PlaceCartOrderComponent } from './place-cart-order/place-cart-order.component';
 import { PlaceCartOrderService } from './place-cart-order/place-cart-order.service';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { MyOrderHistoryService } from './my-orders/my-orders.service';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { PlaceCartOrderService } from './place-cart-order/place-cart-order.servi
     InventoryComponent,
     OrderHistoryComponent,
     CartComponent,
-    PlaceCartOrderComponent
+    PlaceCartOrderComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +81,8 @@ import { PlaceCartOrderService } from './place-cart-order/place-cart-order.servi
               InventoryService,
               OrderHistoryService,
               CartService,
-              PlaceCartOrderService
+              PlaceCartOrderService,
+              MyOrderHistoryService
             ],
   bootstrap: [AppComponent]
 })

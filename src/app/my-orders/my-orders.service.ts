@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 
 @Injectable()
-export class OrderHistoryService{
+export class MyOrderHistoryService{
     constructor(private httpClient: HttpClient){
         this.httpClient = httpClient;
     }

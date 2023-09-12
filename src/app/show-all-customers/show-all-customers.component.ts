@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ShowAllCustomersComponent {
   customers:any[] = [];
   error:any;
+  addedCustomer:any;
     constructor(private customerService: CustomerService, private router:Router, private activeRoute:ActivatedRoute){}
 
     ngOnInit(): void {

@@ -16,6 +16,7 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { CartComponent } from './cart/cart.component';
 import { PlaceCartOrderComponent } from './place-cart-order/place-cart-order.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 const routes: Routes = [
   {component:LoginComponent, path:""},
@@ -32,6 +33,7 @@ const routes: Routes = [
   {component:PlaceCartOrderComponent, path:"app-place-cart-order"},
   {component:CartComponent, path:"app-cart"},
   {component:OrderHistoryComponent, path:"app-order-history"},
+  {component:MyOrdersComponent, path:"app-my-orders"},
   {component:AddCustomerComponent, path:"app-add-customer"},
   {component:ArsenalBoxComponent, path:"app-arsenal-box"}
 

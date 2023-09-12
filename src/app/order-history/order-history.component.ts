@@ -11,7 +11,13 @@ export class OrderHistoryComponent implements OnInit {
   constructor(private orderHistoryService : OrderHistoryService, private router:Router, private activeRoute:ActivatedRoute){}
 
   orders :any[] = [];
+  myOrders :any[] = [];
   error:any;
+
+  public getMyOrderHistory():any{
+      this.orderHistoryService.getMyOrders().subscribe((data) => this.myOrders = data);
+  }
+
 
   ngOnInit(): void {
     this.orderHistoryService.getOrderHistory().subscribe((data)=> this.orders = data,error => { 

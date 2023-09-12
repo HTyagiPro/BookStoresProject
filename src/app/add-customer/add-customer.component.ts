@@ -10,13 +10,22 @@ import { NgForm } from '@angular/forms';
 })
 export class AddCustomerComponent {
   error:any;
+  flag : boolean = false;
+  customer : any;
   constructor(private addCustomerService: AddCustomerService, private router:Router, private activeRoute:ActivatedRoute){}
 
   data: any;
   public formSubmit(customerForm:NgForm){
     this.addCustomerService.addCustomer(customerForm.value).subscribe((data:any)=> {
-      this.data = data
+      this.data = data;
+
     },error => { 
+      if (error.status == 200){
+        this.addCustomerService.getAddedCustomer().subscribe((data:any) => this.customer = data);
+        this.flag = true;
+        alert("Customer Added Successfully!!!");
+        
+      }
       console.log(error.error.text);
       console.log(error.status);
     });

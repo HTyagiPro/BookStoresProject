@@ -22,6 +22,7 @@ export class AddAuthorComponent {
       {
         //window.localStorage.setItem("token", error.error.text);
         this.flag = true;
+        alert("Author Added Sucessfully");
         this.addAuthorService.getAddedAuthor().subscribe((data:any)=> this.author = data);
         //this.route.navigateByUrl('/app-arsenal-box');
       }else {
