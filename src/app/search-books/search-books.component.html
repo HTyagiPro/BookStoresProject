@@ -48,6 +48,9 @@
         <td>{{b.isbncode}}</td>
         <td>{{b.publishedYear}}</td>
         <td>{{b.bookCondition}}</td>
+        <td>
+          <input type="button" class="add-to-cart-button" value="Add To Cart" (click)="onClickAddToCart(b.bookID)">
+      </td>
     </tr>
     </table>
 </div>

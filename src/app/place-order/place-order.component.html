@@ -121,6 +121,7 @@
         <td>:</td>
         <td>{{orderDetails.order_Date|date}}</td>
       </tr>
+      <!--
       <tr class="table-success">
         <th>Payment Status</th>
         <td>:</td>
@@ -130,8 +131,13 @@
         <th>Payment Date</th>
         <td>:</td>
         <td>{{orderDetails.payment_date|date}}</td>
-      </tr>   
+      </tr> 
+      -->
+      <tr>
+        <td><input id="place" type="button" (click)="makePayment()" value="Make Payment"></td>
+      </tr> 
   </table>
+
 </div>
 
 <div class="container"></div>

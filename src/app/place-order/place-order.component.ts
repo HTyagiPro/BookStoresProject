@@ -17,20 +17,25 @@ export class PlaceOrderComponent {
     error:any;
     flag : boolean = false;
     orderDetails:any;
+
+    public makePayment(){
+      // this.router.navigateByUrl('https://rzp.io/l/arsenalPay');
+      window.location.href = 'https://rzp.io/l/FBX171M';
+    }
+
+
     public formSubmit(orderForm:NgForm){
+      //window.location.href = 'https://rzp.io/l/FBX171M';
       this.placeOrderService.placeOrder(orderForm.value).subscribe((data:any)=> this.data = data, 
     error => { 
       this.error = JSON.stringify(error.error.text);
       if (error.status == 200)
       {
-        
-        window.alert("Order Placed Successfully.");
+        window.alert("Order Placed Successfully. Proceed for payment...");
         //window.location.reload();
-        this.placeOrderService.getplacedOrderDetails().subscribe((data:any)=> this.orderDetails = data);
-        
+        // this.placeOrderService.getplacedOrderDetails().subscribe((data:any)=> this.orderDetails = data);
         this.flag = true;
-
-        this.router.navigateByUrl('https://rzp.io/l/arsenalPay');
+        
 
       }else {
         alert("Something Went Wrong...Try again after sometime.");

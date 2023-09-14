@@ -17,25 +17,26 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { CartComponent } from './cart/cart.component';
 import { PlaceCartOrderComponent } from './place-cart-order/place-cart-order.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {component:LoginComponent, path:""},
-  {component:SignupComponent, path:"app-signup"},
-  {component:BookShelfComponent, path:"app-book-shelf"},
-  {component:AddBooksComponent, path:"app-add-books"},
-  {component:ShowAllCustomersComponent, path:"app-show-all-customers"},
-  {component:ShowAllUsersComponent, path:"app-show-all-users"},
-  {component:SearchBooksComponent, path:"app-search-books"},
-  {component:InventoryComponent, path:"app-inventory"},
-  {component:AddAuthorComponent, path:"app-add-author"},
-  {component:AddPublisherComponent, path:"app-add-publisher"},
-  {component:PlaceOrderComponent, path:"app-place-order"},
-  {component:PlaceCartOrderComponent, path:"app-place-cart-order"},
-  {component:CartComponent, path:"app-cart"},
-  {component:OrderHistoryComponent, path:"app-order-history"},
-  {component:MyOrdersComponent, path:"app-my-orders"},
+  {component:SignupComponent, path:"app-signup",canActivate: [AuthGuard]},
+  {component:BookShelfComponent, path:"app-book-shelf",canActivate: [AuthGuard]},
+  {component:AddBooksComponent, path:"app-add-books",canActivate: [AuthGuard]},
+  {component:ShowAllCustomersComponent, path:"app-show-all-customers",canActivate: [AuthGuard]},
+  {component:ShowAllUsersComponent, path:"app-show-all-users",canActivate: [AuthGuard]},
+  {component:SearchBooksComponent, path:"app-search-books",canActivate: [AuthGuard]},
+  {component:InventoryComponent, path:"app-inventory",canActivate: [AuthGuard]},
+  {component:AddAuthorComponent, path:"app-add-author",canActivate: [AuthGuard]},
+  {component:AddPublisherComponent, path:"app-add-publisher",canActivate: [AuthGuard]},
+  {component:PlaceOrderComponent, path:"app-place-order",canActivate: [AuthGuard]},
+  {component:PlaceCartOrderComponent, path:"app-place-cart-order",canActivate: [AuthGuard]},
+  {component:CartComponent, path:"app-cart",canActivate: [AuthGuard]},
+  {component:OrderHistoryComponent, path:"app-order-history",canActivate: [AuthGuard]},
+  {component:MyOrdersComponent, path:"app-my-orders",canActivate: [AuthGuard]},
   {component:AddCustomerComponent, path:"app-add-customer"},
-  {component:ArsenalBoxComponent, path:"app-arsenal-box"}
+  {component:ArsenalBoxComponent, path:"app-arsenal-box",canActivate: [AuthGuard]}
 
   
   

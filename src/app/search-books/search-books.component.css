@@ -72,3 +72,62 @@
     height: 200px;
     width: 150px;
 }
+
+
+
+/* Style the anchor element to look like an image or button */
+a {
+    display: inline-block; /* Make it a block-level element for sizing */
+    text-decoration: none; /* Remove underline on link */
+    border: 0px solid #ccc; /* Add a border for button-like appearance */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 20px; /* Rounded corners for button effect */
+    background-color: #f0f0f0; /* Background color */
+    transition: background-color 0.2s; /* Add a smooth transition */
+    width: 50%;
+  }
+  
+  /* Style the anchor element on hover */
+  a:hover {
+    background-color: #ddd; 
+  }
+
+  .add-to-cart-button {
+    background-color: #DAF7A6; 
+    line-height: 20px;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  /*
+  .add-to-cart-button {
+    background-color: #DAF7A6; 
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  */
+  .add-to-cart-button:hover {
+    background-color: #9CCC65  
+  }
+  
+  
+  
+  
+  
+  

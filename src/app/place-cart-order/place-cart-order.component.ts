@@ -21,7 +21,7 @@ export class PlaceCartOrderComponent {
     orderDetails:any;
 
     public formSubmit(cartOrderForm:NgForm){
-      console.log(cartOrderForm.value);
+      //console.log(cartOrderForm.value);
       this.placeCartOrderService.placeOrder(cartOrderForm.value).subscribe((data:any)=> this.data = data, 
     error => { 
       this.error = JSON.stringify(error.error.text);

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BookService } from './book-shelf.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { NavbarService } from '../nevbar/navbar.service';
 
 @Component({
   selector: 'app-book-shelf',
@@ -15,7 +16,7 @@ export class BookShelfComponent implements OnInit {
   books:any[] = [];
   error:any;
   data:any;
-    constructor(private bookService: BookService, private router:Router, private activeRoute:ActivatedRoute){}
+    constructor(private bookService: BookService, private router:Router, private activeRoute:ActivatedRoute,private navService:NavbarService){}
 
     public onClickAddToCart(bookId:any){
       this.bookService.addToCart(bookId).subscribe((data)=> this.data = data,error => { 
@@ -31,9 +32,8 @@ export class BookShelfComponent implements OnInit {
 
     }
 
-
-
     ngOnInit(): void {
+      this.isAdmin();
       this.bookService.getAllBooks().subscribe((data)=> this.books = data,error => { 
         this.error = JSON.stringify(error.error.text);
         if (error.status == 200)
@@ -44,6 +44,21 @@ export class BookShelfComponent implements OnInit {
         }
       });
       
+    }
+
+    error1:any;
+    isAdmin() {
+      this.navService.getAdmin().subscribe((res)=>{
+        
+        console.log(res);
+        
+        
+      },error => { 
+        if (error.status == 200) {
+          console.log('errrrrrrrrrrrrrrrrrrrrrrr->'+  JSON.stringify(error));
+          window.localStorage.setItem("isAdmin", error.error.text);
+        }
+      });
     }
 
 }

@@ -10,10 +10,28 @@ import { NgForm } from '@angular/forms';
 })
 export class SearchBooksComponent {
 
-  constructor(private searchBooksService : SearchBooksService, private route: Router) {}
+  constructor(private searchBooksService : SearchBooksService, private route: Router ) {}
   books: any;
   error : any;
   flag:boolean = false;
+  data : any;
+
+
+  public onClickAddToCart(bookId:any){
+    this.searchBooksService.addToCart(bookId).subscribe((data)=> this.data = data,error => { 
+      this.error = JSON.stringify(error.error.text);
+      if (error.status == 200)
+      {
+        alert("Item Added to cart.")
+        //window.localStorage.setItem("token", error.error.text);
+      }else {
+        alert("Wrong Credintials.");
+      }
+    });
+
+  }
+
+
   public formSubmit(searchBooks:NgForm){
     this.flag = true;
     this.searchBooksService.searchBooks(searchBooks.value).subscribe((data:any)=> this.books = data, 
