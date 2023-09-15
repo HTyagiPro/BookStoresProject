@@ -38,6 +38,8 @@ import { PlaceCartOrderComponent } from './place-cart-order/place-cart-order.com
 import { PlaceCartOrderService } from './place-cart-order/place-cart-order.service';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { MyOrderHistoryService } from './my-orders/my-orders.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//import { BFormRatingModule } from 'path-to-b-form-rating-module';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { MyOrderHistoryService } from './my-orders/my-orders.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    
   ],
   providers: [LoginService,
               BookService, 

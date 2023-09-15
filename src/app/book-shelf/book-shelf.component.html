@@ -14,7 +14,17 @@
                 <th>Add to Cart</th>
             </tr>
         <tr *ngFor="let b of books" class="table-success">
-            <td><img id="cover" src="{{b.images}}" alt="" href="/"/></td>
+            <div>
+                <div>
+                    <td><img id="cover" src="{{b.images}}" alt="" href="/"/></td>
+                 </div>
+                <!--
+                 <div>
+                    <b-form-rating v-model="value" variant="success" class="mb-2"></b-form-rating>
+                 </div>
+                -->
+                
+        </div>
             <td>{{b.title}}</td>
             <td>{{b.author.authorName}}</td>
             <td>{{b.publisher.publisherName}}</td>

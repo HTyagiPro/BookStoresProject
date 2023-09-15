@@ -3,6 +3,10 @@ import { BookService } from './book-shelf.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { NavbarService } from '../nevbar/navbar.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//import { BFormRating } from 'bootstrap-vue' Vue.component('b-form-rating', BFormRating)
+
+
 
 @Component({
   selector: 'app-book-shelf',
