@@ -25,6 +25,7 @@
     align-self: start;
     border: 1px solid brown;
     border-radius: 30px;
+    background: none;
 }
 
 #bookShelf img{
@@ -37,3 +38,24 @@
     font-weight: bolder;
     font-size: large;
 }
+
+#rating{
+    background-color: #E6B0AA;
+}
+
+
+#rating #myBtn{
+    border-color: #641E16;
+    color: #641E16;
+    display: flex;
+    margin: auto;
+     
+}
+
+
+#rating #myBtn:hover{
+    color: aliceblue;
+    background-color: #641E16 ;
+    opacity: 80%;
+}
+

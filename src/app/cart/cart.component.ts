@@ -13,6 +13,11 @@ export class CartComponent implements OnInit {
   error:any;
   constructor(private cartService: CartService, private router:Router, private activeRoute:ActivatedRoute){}
 
+   public onClickDeleteFromCart(bookID:any){
+
+  }
+
+
   ngOnInit(): void {
     this.cartService.getAllCartItems().subscribe((data)=> this.cartItems = data,error => { 
       this.error = JSON.stringify(error.error.text);
@@ -25,6 +30,9 @@ export class CartComponent implements OnInit {
     });
   }
 
-
+onRatingUpdated(rating: number) {
+      // Handle the rating update logic here
+      
+    }
   
 }

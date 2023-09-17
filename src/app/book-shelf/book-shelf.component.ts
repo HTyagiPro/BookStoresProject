@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BookService } from './book-shelf.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { NavbarService } from '../nevbar/navbar.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-//import { BFormRating } from 'bootstrap-vue' Vue.component('b-form-rating', BFormRating)
-
+import { BFormRating } from 'bootstrap-vue';
+import { BootstrapVue } from 'bootstrap-vue';
 
 
 @Component({
+  
+
   selector: 'app-book-shelf',
   templateUrl: './book-shelf.component.html',
-  styleUrls: ['./book-shelf.component.css']
+  styleUrls: ['./book-shelf.component.css'],
+  
 })
 export class BookShelfComponent implements OnInit {
 
@@ -59,10 +62,21 @@ export class BookShelfComponent implements OnInit {
         
       },error => { 
         if (error.status == 200) {
-          console.log('errrrrrrrrrrrrrrrrrrrrrrr->'+  JSON.stringify(error));
           window.localStorage.setItem("isAdmin", error.error.text);
         }
       });
+
+
+      
+
     }
+
+    
+
+    onRatingUpdated(rating: number) {
+      // Handle the rating update logic here
+      
+    }
+  
 
 }

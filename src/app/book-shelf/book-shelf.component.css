@@ -26,23 +26,59 @@
     align-self: start;
     text-align: center;
     
+    
 }
+
+#bookShelf tr{
+  line-height: 70px;
+  align-self: start;
+  text-align: center;
+  border: 1.5px solid brown;
+  margin: 2%;
+  box-shadow: 2%;
+  
+}
+
 
 #bookShelf #cover{
     height: 200px;
     width: 150px;
 }
 
+
+
 #bookShelf h3{
     text-decoration: solid;
     font-weight: bolder;
 }
 
+#bookShelf img{
+  background-color: #9CCC65;
+  background: none;
+}
+
 #bookShelf #cart{
     border-radius: 100%;
-    box-shadow: 10px 10px 25px #E6B0AA;
-   
-    
+    box-shadow: 10px 10px 25px #E6B0AA;    
+}
+
+
+.firstBox{
+  display: flex;
+  background-color: blanchedalmond;
+  flex-direction: column;
+  margin-bottom: 0.5%;
+}
+
+#bookImg{
+  height: 95%;
+  background-color: blanchedalmond;
+}
+#bookRating{
+  height: 5%;
+  background-color: blanchedalmond;
+  /* border: 1.5px solid brown; */
+  
 }
 
 
@@ -97,7 +133,73 @@ a {
     background-color: #9CCC65  /* Change to your desired hover color */
   }
   
-  
+  /* ------------------------------------------------------------------------------------------------------- */
+
+  .tile1{
+    display: flex;
+    flex-direction: row;
+    background-color: blanchedalmond;
+    margin: 5%;
+    text-indent: 2px;
+    box-shadow: 10px 10px 25px #641E16;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-color: brown;
+    padding: 1rem 20px;
+    font-family: cursive;
+    border-radius: 30px;
+    
+  }
+
+
+  .tile1 #cover{
+    height: 200px;
+    width: 150px;
+  }
+
+  .tile1 #bookRating{
+    margin: 5%;
+  }
+
+  .tile1 #bookDetails{
+    height: fit-content;
+    width: 100%;
+    margin: auto;
+    margin-right: 10%;
+    margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  #bookDetails #detail2{
+    margin-left: 20%;
+  }
+
+  .tile1 #cartButton{
+    background-color: #DAF7A6; 
+    line-height: 20px;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 5%;
+  }
+
+  .tile1 #cartButton:hover {
+    background-color: #9CCC65
+  }
   
   
   

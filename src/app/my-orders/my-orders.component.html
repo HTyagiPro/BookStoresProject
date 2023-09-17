@@ -15,6 +15,7 @@
             <th>Order Date</th>
             <th>Payment Status</th>
             <th>Payment Date</th>
+            <th>Review</th>
         </tr>
         <tr class="table-success" *ngFor="let o of myOrders">
             <td>{{o.orderID}}</td>
@@ -30,6 +31,26 @@
             <td>{{o.order_Date|date}}</td>
             <td>{{o.status}}</td>
             <td>{{o.payment_date|date}}</td>
+            <td id="rating">
+                <form #review="ngForm" (ngSubmit)="formSubmit(review.value.rating,o.bookID)" style="background-color: blanchedalmond;" method="post">
+                <div class="col-md-3" style="width: 80%; background: none; align-items: center; margin: auto;">
+                    <select  class="form-select" id="validationCustom06"  required ngModel name="rating" >
+                      <option selected disabled value="">Choose...</option>
+                        <option value="1">1⭐</option>
+                        <option value="2">2⭐</option>
+                        <option value="3">3⭐</option>
+                        <option value="4">4⭐</option>
+                        <option value="5">5⭐</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid Book Rating.
+                    </div>
+                  </div>
+                  
+                    <input id="myBtn" class="btn btn-outline-dark" value="Post" type="submit" style="height: 10%;  margin: 2px auto; ">
+    
+                </form>
+            </td>
         </tr>
     </table>
 </div>

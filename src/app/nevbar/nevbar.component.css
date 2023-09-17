@@ -4,10 +4,18 @@
     font-size: medium;
     font-weight:bolder;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    opacity: 80%;
+    background-color: #641E16;
     
 }
 
 .navbar-brand{
     font-family: cursive;
+}
+
+#prolifics img{
+    height: 100%;
+    width: 15%;
+    align-items: end;
+    /* margin-right: 0%; */
+    margin-left: 75%;
 }

@@ -1,4 +1,70 @@
-    <div id = "bookShelf">
+<div class="tile1" *ngFor="let b of books">
+    <div class="firstBox" id="myBox" >
+        <div id="bookImg">
+            <img id="cover" src="{{b.images}}" alt="" href="/"/>
+         </div>
+        
+         <div id="bookRating">
+            <app-rating [maxRating]="5" [initialRating]="b.rating" (ratingUpdated)="onRatingUpdated($event)"></app-rating>
+         </div> 
+    </div>
+
+    <div id="bookDetails">
+        <div id="detail1">
+            <p> <strong>
+                    Title : 
+                </strong>
+                <i>{{b.title}}</i>
+            </p>
+            <p>
+                <strong>
+                    Author : 
+                </strong>
+                {{b.author.authorName}}</p>
+            <p>
+                <strong>
+                    Publisher : 
+                </strong>
+                {{b.publisher.publisherName}}</p>
+            <p>
+                <strong>
+                    Category : 
+                </strong>
+                {{b.category}}</p>
+        </div>
+        <div id="detail2">
+            <p>
+                <strong>
+                    Price : 
+                </strong>
+                {{b.price| currency:'INR'}}</p>
+            <p>
+                <strong>
+                    ISBN Code : 
+                </strong>
+                {{b.isbncode}}</p>
+            <p>
+                <strong>
+                    Published Year : 
+                </strong>
+                {{b.publishedYear}}</p>
+            <p>
+                <strong>
+                    Book Condition : 
+                </strong>
+                {{b.bookCondition}}</p>
+        </div>
+    </div>
+
+    <div id="cartButton">
+        <input type="button" class="add-to-cart-button" value="Add To Cart" (click)="onClickAddToCart(b.bookID)">
+    </div>
+
+</div>
+
+
+<!-- 
+        <div id = "bookShelf" >
         <h3 align="center">All Books</h3><br>
         <table  class="table table-success table-striped">
             <tr class="table-success">
@@ -14,17 +80,15 @@
                 <th>Add to Cart</th>
             </tr>
         <tr *ngFor="let b of books" class="table-success">
-            <div>
-                <div>
-                    <td><img id="cover" src="{{b.images}}" alt="" href="/"/></td>
+             <div class="firstBox" id="myBox" >
+                <div id="bookImg">
+                    <td ><img id="cover" src="{{b.images}}" alt="" href="/"/></td>
                  </div>
-                <!--
-                 <div>
-                    <b-form-rating v-model="value" variant="success" class="mb-2"></b-form-rating>
-                 </div>
-                -->
                 
-        </div>
+                 <div id="bookRating">
+                    <app-rating [maxRating]="5" [initialRating]="b.rating" (ratingUpdated)="onRatingUpdated($event)"></app-rating>
+                 </div> 
+            </div>
             <td>{{b.title}}</td>
             <td>{{b.author.authorName}}</td>
             <td>{{b.publisher.publisherName}}</td>
@@ -40,34 +104,4 @@
         </table>
     </div>
 
-
-
-
-
-
-
-
-
-<!--
-<div *ngFor="let b of books" >
-    <div class="col-md-3">
-        <div class="card crd-ho">
-        <div class="card-body text-center">
-            <img alt="" src="assets\HimalyaFaceWash.jpg" style="width:150px;height:200px;"  class="img-thumblin"/>
-            
-            <br><br>
-            <p><b>{{b.title}}</b></p>
-            <p>{{b.author_Name}}</p>
-            <p>{{b.category}}</p>
-            <div class="row">
-            <a href="" class="btn btn-danger btn-sm ml-2">Add Cart</a>
-            <a href="" class="btn btn-success btn-sm ml-1">View Details</a>
-            <a href="" class="btn btn-danger btn-sm ml-1">150</a>
-            
-            </div>	
-        </div>
-    </div>
-    </div>
-</div>
-
--->
+ -->

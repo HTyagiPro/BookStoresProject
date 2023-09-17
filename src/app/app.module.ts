@@ -40,6 +40,11 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { MyOrderHistoryService } from './my-orders/my-orders.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //import { BFormRatingModule } from 'path-to-b-form-rating-module';
+import { BootstrapVue } from 'bootstrap-vue';
+import { DatePipe, CurrencyPipe } from '@angular/common';
+import { RatingComponent } from './rating/rating.component';
+
+
 
 @NgModule({
   declarations: [
@@ -63,7 +68,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     OrderHistoryComponent,
     CartComponent,
     PlaceCartOrderComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +77,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     HttpClientModule,
     NgbModule,
+    
+    
+    
     
   ],
   providers: [LoginService,
@@ -86,7 +95,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
               OrderHistoryService,
               CartService,
               PlaceCartOrderService,
-              MyOrderHistoryService
+              MyOrderHistoryService,
+              DatePipe,
+              CurrencyPipe
             ],
   bootstrap: [AppComponent]
 })

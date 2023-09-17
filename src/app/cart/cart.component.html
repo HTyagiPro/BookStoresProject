@@ -1,5 +1,97 @@
+<h3 align="center">My Cart</h3><br>
+<div class="tile1" *ngFor="let b of cartItems">
+    <div class="firstBox" id="myBox" >
+        <div id="bookImg">
+            <img id="cover" src="{{b.book.images}}" alt="" href="/"/>
+         </div>
+    </div>
 
+    <div id="bookDetails">
+        <div id="detail1">
+            <p> <strong>
+                    Title : 
+                </strong>
+                <i>{{b.book.title}}</i>
+            </p>
+            <p>
+                <strong>
+                    Author : 
+                </strong>
+                {{b.book.author.authorName}}</p>
+            <p>
+                <strong>
+                    Publisher : 
+                </strong>
+                {{b.book.publisher.publisherName}}</p>
+            <p>
+                <strong>
+                    Category : 
+                </strong>
+                {{b.book.category}}</p>
+        </div>
+        <div id="detail2">
+            <p>
+                <strong>
+                    Price : 
+                </strong>
+                {{b.book.price| currency:'INR'}}</p>
+            <p>
+                <strong>
+                    ISBN Code : 
+                </strong>
+                {{b.book.isbncode}}</p>
+            <p>
+                <strong>
+                    Published Year : 
+                </strong>
+                {{b.book.publishedYear}}</p>
+            <p>
+                <strong>
+                    Book Condition : 
+                </strong>
+                {{b.book.bookCondition}}</p>
+        </div>
+        <div id="detail3">
+            <p>
+                <strong>
+                    Quantity: 
+                </strong>
+                {{b.quantity}}
+            </p>
+            <p>
+                <strong>
+                    Sub-total: 
+                </strong>
+                {{b.quantity * b.book.price | currency : 'INR'}}
+            </p>
+            <p>
+                <strong>
+                    Item Added On: 
+                </strong>
+                {{b.recordCreatedOn | date}}
+            </p>
+            <p>
+                <strong>
+                    Rating: 
+                </strong>
+                <app-rating id="bookRating" [maxRating]="5" [initialRating]="b.book.rating" (ratingUpdated)="onRatingUpdated($event)"></app-rating>
+            </p>
+            
 
+            
+        </div>
+    </div>
+
+    <div id="cartButton">
+        <input type="button" class="add-to-cart-button" value="Delete" (click)="onClickDeleteFromCart(b.bookID)">
+    </div>
+
+</div>
+
+<div class="container"></div>
+
+<!-- 
+    
 <div id = "bookShelf">
     <h3 align="center">My Cart</h3><br>
     <table  class="table table-success table-striped">
@@ -24,4 +116,4 @@
     </table>
 </div>
 
-<div class="container"></div>
+ -->

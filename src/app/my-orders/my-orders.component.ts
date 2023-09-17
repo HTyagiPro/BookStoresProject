@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyOrderHistoryService } from './my-orders.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-my-orders',
@@ -13,7 +14,19 @@ export class MyOrdersComponent implements OnInit {
   myOrders :any[] = [];
   error:any;
   data:any;
+  data2:any;
   
+  public formSubmit(review : any,bookId:any){
+        
+    const data = {
+      review: '',
+      bookID:''
+    }
+    data.review = JSON.stringify(JSON.parse(review));
+    data.bookID = JSON.stringify(bookId);
+
+    this.myOrderHistoryService.setMyOrdersRating(data).subscribe((data2) => this.data2 = data2);
+  }
 
   public getMyOrderHistory():any{
       this.myOrderHistoryService.getMyOrders().subscribe((data) => this.myOrders = data);
