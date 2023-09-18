@@ -1,4 +1,4 @@
-<div id = "bookShelf">
+<div id = "bookShelf" *ngIf="false">
     <h3 align="center">My Order History</h3><br>
     <table  class="table table-success table-striped">
         <tr class="table-success">
@@ -55,7 +55,7 @@
     </table>
 </div>
 
-<div class="tile1" *ngFor="let b of orders">
+<div class="tile1" *ngFor="let b of myOrders">
     <div class="firstBox" id="myBox" >
         <div id="bookImg">
             <img id="cover" src="{{b.images}}" alt="" href="/"/>
@@ -69,6 +69,11 @@
     <div id="bookDetails">
         <div id="detail1">
             <p> <strong>
+                Order ID : 
+            </strong>
+            <i>{{b.orderID}}</i>
+        </p>
+            <p> <strong>
                     Title : 
                 </strong>
                 <i>{{b.title}}</i>
@@ -77,45 +82,90 @@
                 <strong>
                     Author : 
                 </strong>
-                {{b.author.authorName}}</p>
+                {{b.author_Name}}</p>
             <p>
                 <strong>
                     Publisher : 
                 </strong>
-                {{b.publisher.publisherName}}</p>
+                {{b.publisher_Name}}</p>
             <p>
                 <strong>
                     Category : 
                 </strong>
-                {{b.category}}</p>
+                {{b.category}}
+            </p>
+            
         </div>
         <div id="detail2">
             <p>
                 <strong>
                     Price : 
                 </strong>
-                {{b.price| currency:'INR'}}</p>
+                {{b.price| currency:'INR'}}
+            </p>
             <p>
                 <strong>
                     ISBN Code : 
                 </strong>
-                {{b.isbncode}}</p>
+                {{b.isbnCode}}</p>
             <p>
                 <strong>
                     Published Year : 
                 </strong>
-                {{b.publishedYear}}</p>
+                {{b.published_Year}}</p>
             <p>
                 <strong>
                     Book Condition : 
                 </strong>
-                {{b.bookCondition}}</p>
+                {{b.book_condition}}</p>
+            <p>
+                <strong>
+                    Quantity: 
+                </strong>
+                {{b.quantity}}
+            </p>
+            
+        </div>
+        <div id="detail3">
+            <p>
+                <strong>
+                    Sub-total: 
+                </strong>
+                {{b.quantity * b.price + b.price*0.18 - b.price*0.1 | currency : 'INR'}}
+            </p>
+            <p>
+                <strong>
+                    Shipped Add.: 
+                </strong>
+                {{b.shipping_Address}}
+            </p>
+            <p>
+                <strong>
+                    Ordered On: 
+                </strong>
+                {{b.order_Date | date}}
+            </p> 
+            <p>
+                <strong>
+                    Payment On : 
+                </strong>
+                {{b.payment_date | date}}
+            </p>
+            <p>
+                <strong>
+                    Payment Status : 
+                </strong>
+                {{b.status}}
+            </p>    
+
         </div>
     </div>
 
-    <div id="cartButton">
-        <form #review="ngForm" (ngSubmit)="formSubmit(review.value.rating,b.bookID)" style="background-color: blanchedalmond;" method="post">
-            <div class="col-md-3" style="width: 80%; background: none; align-items: center; margin: auto;">
+    <div id="myform">
+        <p align="center"><strong>Post Review</strong></p>
+        <div class="formF1">
+        <form #review="ngForm" (ngSubmit)="formSubmit(review.value.rating,b.bookID)" method="post">
+            <div class="col-md-3">
                 <select  class="form-select" id="validationCustom06"  required ngModel name="rating" >
                   <option selected disabled value="">Choose...</option>
                     <option value="1">1⭐</option>
@@ -128,10 +178,14 @@
                   Please select a valid Book Rating.
                 </div>
               </div>
-              
-                <input id="myBtn" class="btn btn-outline-dark" value="Post" type="submit" style="height: 10%;  margin: 2px auto; ">
-
+              <div id="cartButton">
+                <input class="add-to-cart-button" value="Submit" type="submit" >
+              </div>
             </form>
+            <div id="return">
+                <input type="button" class="add-to-cart-button2" value="Return" (click)="applyReturn(b.bookID)">
+            </div>
+        </div>
     </div>
 
 </div>

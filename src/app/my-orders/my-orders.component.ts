@@ -41,5 +41,7 @@ export class MyOrdersComponent implements OnInit {
     // Handle the rating update logic here
     
   }
+  public applyReturn(bookID:any){
 
+  }
 }

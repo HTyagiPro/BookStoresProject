@@ -59,3 +59,165 @@
     opacity: 80%;
 }
 
+
+/* Style the anchor element to look like an image or button */
+a {
+    display: inline-block; /* Make it a block-level element for sizing */
+    text-decoration: none; /* Remove underline on link */
+    border: 0px solid #ccc; /* Add a border for button-like appearance */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 20px; /* Rounded corners for button effect */
+    background-color: #f0f0f0; /* Background color */
+    transition: background-color 0.2s; /* Add a smooth transition */
+    width: 100%;
+  }
+  
+  /* Style the anchor element on hover */
+  a:hover {
+    background-color: #ddd; /* Change background color on hover */
+  }
+
+  .add-to-cart-button {
+    background-color: #DAF7A6; 
+    color: black;
+    border: none;
+    padding: 10px 35%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 98%;
+  }
+
+  /*
+  .add-to-cart-button {
+    background-color: #DAF7A6; 
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  */
+  .add-to-cart-button:hover {
+    background-color: #9CCC65  /* Change to your desired hover color */
+  }
+  
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+.tile1{
+    display: flex;
+    flex-direction: row;
+    background-color: blanchedalmond;
+    margin: 3%;
+    text-indent: 2px;
+    box-shadow: 10px 10px 25px #E6B0AA;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-color: brown;
+    padding: 1rem 20px;
+    font-family: cursive;
+    border-radius: 30px;
+    
+  }
+
+  .tile1 #cover{
+    height: 200px;
+    width: 150px;
+  }
+
+  .tile1 #bookDetails{
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tile1 .firstBox #bookRating{
+    margin: 5%;
+  }
+
+
+  .tile1 #bookDetails #detail1{
+    width: 35%;
+    margin-left: 1%;
+  }
+  .tile1 #bookDetails #detail2{
+    width: 30%;
+  }
+  .tile1 #bookDetails #detail3{
+    width: 35%;
+  }
+
+  .tile1 #myform{
+    width: 15%;
+    margin-top: 0%;
+  }
+
+  .tile1 #myform p{
+    margin-bottom: 1%;
+  }
+
+  .tile1 #myform .formF1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .tile1 .formF1 form{
+    height: 50%;
+    margin-top: 5%;
+  }
+
+  .tile1 .formF1 form .col-md-3{
+    width: 100%;
+    height: 35%;
+    margin-bottom: 5%;
+  }
+
+  .tile1 .formF1 #return {
+    width: 100%;
+  } 
+
+
+  /* -------button------------ */
+  .add-to-cart-button2 {
+    background-color: #F7402B; 
+    color: white;
+    border: none;
+    padding: 10px 35%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  /*
+  .add-to-cart-button2 {
+    background-color: #DAF7A6; 
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  */
+  .add-to-cart-button2:hover {
+    background-color: red  /* Change to your desired hover color */
+  }
+ 
