@@ -1,5 +1,5 @@
 
-    <div class="searchBook" method="post">
+    <div class="searchBook" method="post" *ngIf="flag == false">
         <h3 align="center">Search Books</h3><br>
           <form #searchBook="ngForm" (ngSubmit)="formSubmit(searchBook)">
               
@@ -25,6 +25,77 @@
 
 
 
+
+<div *ngIf="flag">
+  <h3 align="center">Search Results</h3><br>
+  <div class="tile1" *ngFor="let b of books">
+    <div class="firstBox" id="myBox" >
+        <div id="bookImg">
+            <img id="cover" src="{{b.images}}" alt="" href="/"/>
+        </div>
+        <div id="bookRating">
+            <app-rating [maxRating]="5" [initialRating]="b.rating" (ratingUpdated)="onRatingUpdated($event)"></app-rating>
+        </div> 
+    </div>
+
+    <div id="bookDetails">
+        <div id="detail1">
+            <p> <strong>
+                    Title : 
+                </strong>
+                <i>{{b.title}}</i>
+            </p>
+            <p>
+                <strong>
+                    Author : 
+                </strong>
+                {{b.author.authorName}}</p>
+            <p>
+                <strong>
+                    Publisher : 
+                </strong>
+                {{b.publisher.publisherName}}</p>
+            <p>
+                <strong>
+                    Category : 
+                </strong>
+                {{b.category}}</p>
+        </div>
+        <div id="detail2">
+            <p>
+                <strong>
+                    Price : 
+                </strong>
+                {{b.price| currency:'INR'}}</p>
+            <p>
+                <strong>
+                    ISBN Code : 
+                </strong>
+                {{b.isbncode}}</p>
+            <p>
+                <strong>
+                    Published Year : 
+                </strong>
+                {{b.publishedYear}}</p>
+            <p>
+                <strong>
+                    Book Condition : 
+                </strong>
+                {{b.bookCondition}}</p>
+        </div>
+    </div>
+
+    <div id="cartButton">
+        <input type="button" class="add-to-cart-button" value="Add To Cart" (click)="onClickAddToCart(b.bookID)">
+    </div>
+
+  </div>
+</div>
+
+<div class="container"></div>
+
+
+<!-- 
 <div id = "bookShelf" *ngIf="flag">
     <table  class="table table-success table-striped">
         <tr class="table-success">
@@ -54,5 +125,5 @@
     </tr>
     </table>
 </div>
+ -->
 
-<div class="container"></div>

@@ -48,6 +48,9 @@ export class SearchBooksComponent {
     })    
   }
 
-
+  onRatingUpdated(rating: number) {
+    // Handle the rating update logic here
+    
+  }
 
 }

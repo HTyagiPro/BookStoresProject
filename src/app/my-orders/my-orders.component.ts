@@ -36,4 +36,10 @@ export class MyOrdersComponent implements OnInit {
     this.getMyOrderHistory();
   }
 
+
+  onRatingUpdated(rating: number) {
+    // Handle the rating update logic here
+    
+  }
+
 }

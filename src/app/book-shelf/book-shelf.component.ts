@@ -4,8 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { NavbarService } from '../nevbar/navbar.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BFormRating } from 'bootstrap-vue';
-import { BootstrapVue } from 'bootstrap-vue';
+// import { BFormRating } from 'bootstrap-vue';
+// import { BootstrapVue } from 'bootstrap-vue';
 
 
 @Component({

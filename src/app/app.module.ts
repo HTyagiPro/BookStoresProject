@@ -40,7 +40,7 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { MyOrderHistoryService } from './my-orders/my-orders.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //import { BFormRatingModule } from 'path-to-b-form-rating-module';
-import { BootstrapVue } from 'bootstrap-vue';
+//import { BootstrapVue } from 'bootstrap-vue';
 import { DatePipe, CurrencyPipe } from '@angular/common';
 import { RatingComponent } from './rating/rating.component';
 
