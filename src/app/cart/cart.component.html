@@ -77,14 +77,24 @@
                 <app-rating id="bookRating" [maxRating]="5" [initialRating]="b.book.rating" (ratingUpdated)="onRatingUpdated($event)"></app-rating>
             </p>
             
-
-            
         </div>
     </div>
-
-    <div id="cartButton">
-        <input type="button" class="add-to-cart-button" value="Delete" (click)="onClickDeleteFromCart(b.book.bookID)">
-    </div>
+    <div class="lastCol">
+        <div id="cartButton">
+            <input type="button" class="add-to-cart-button2" value="Delete" (click)="onClickDeleteFromCart(b.book.bookID)">
+        </div>
+        <div id="payable">
+            <p>
+                <strong>
+                    Sub-total: 
+                </strong>
+                {{b.quantity * b.book.price + b.book.price * 0.18 - b.book.price * 0.1 | currency : 'INR'}}
+            </p>
+        </div>
+        <div id="checkoutCartButton">
+            <input type="button" class="add-to-cart-button" value="Check-Out" routerLink="/app-place-cart-order">
+        </div>
+</div>
 
 </div>
 

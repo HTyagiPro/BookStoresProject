@@ -13,6 +13,7 @@ export class NevbarComponent implements OnInit {
   constructor(private route:Router,private navService:NavbarService)
  {}
   ngOnInit(): void {
+    
     if(window.localStorage.getItem('isAdmin') == '1$1#') {
       // show
       this.showAdmin = true;

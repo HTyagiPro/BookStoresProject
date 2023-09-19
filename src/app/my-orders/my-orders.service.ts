@@ -26,5 +26,12 @@ export class MyOrderHistoryService{
         return this.httpClient.post("http://localhost:8089/ratings/setRating", rateForm,{headers:header});
     }
 
+    public returnBook(orderDetails : any) : Observable<any>{
+        var header = new HttpHeaders().set("Authorization", "Bearer " + window.localStorage.getItem("token"));
+        console.log(orderDetails);
+        
+        return this.httpClient.post("http://localhost:8089/order-items/return", orderDetails,{headers:header});
+    }
+
   
 }

@@ -1,60 +1,4 @@
-<div id = "bookShelf" *ngIf="false">
-    <h3 align="center">My Order History</h3><br>
-    <table  class="table table-success table-striped">
-        <tr class="table-success">
-            <th>Order ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Book Title</th>
-            <th>ISBN Code</th>
-            <th>Unit Price</th>
-            <th>Quantity</th>
-            <th>Tax</th>
-            <th>Discount</th>
-            <th>Total Amt.</th>
-            <th>Order Date</th>
-            <th>Payment Status</th>
-            <th>Payment Date</th>
-            <th>Review</th>
-        </tr>
-        <tr class="table-success" *ngFor="let o of myOrders">
-            <td>{{o.orderID}}</td>
-            <td>{{o.cust_Name}}</td>
-            <td>{{o.email}}</td>
-            <td>{{o.title}}</td>
-            <td>{{o.isbnCode}}</td>
-            <td>{{o.price | currency:'INR'}}</td>
-            <td>{{o.quantity}}</td>
-            <td>{{o.tax_Amount | currency:'INR'}}</td>
-            <td>{{o.discount_Amount | currency:'INR'}}</td>
-            <td>{{o.amount | currency:'INR'}}</td>
-            <td>{{o.order_Date|date}}</td>
-            <td>{{o.status}}</td>
-            <td>{{o.payment_date|date}}</td>
-            <td id="rating">
-                <form #review="ngForm" (ngSubmit)="formSubmit(review.value.rating,o.bookID)" style="background-color: blanchedalmond;" method="post">
-                <div class="col-md-3" style="width: 80%; background: none; align-items: center; margin: auto;">
-                    <select  class="form-select" id="validationCustom06"  required ngModel name="rating" >
-                      <option selected disabled value="">Choose...</option>
-                        <option value="1">1⭐</option>
-                        <option value="2">2⭐</option>
-                        <option value="3">3⭐</option>
-                        <option value="4">4⭐</option>
-                        <option value="5">5⭐</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Please select a valid Book Rating.
-                    </div>
-                  </div>
-                  
-                    <input id="myBtn" class="btn btn-outline-dark" value="Post" type="submit" style="height: 10%;  margin: 2px auto; ">
-    
-                </form>
-            </td>
-        </tr>
-    </table>
-</div>
-
+<h3 align="center">My Orders</h3><br>
 <div class="tile1" *ngFor="let b of myOrders">
     <div class="firstBox" id="myBox" >
         <div id="bookImg">
@@ -183,14 +127,70 @@
               </div>
             </form>
             <div id="return">
-                <input type="button" class="add-to-cart-button2" value="Return" (click)="applyReturn(b.bookID)">
+                <input type="button" class="add-to-cart-button2" value="Return" (click)="applyReturn(b.orderID, b.bookID)">
             </div>
         </div>
     </div>
 
 </div>
 
-
-
+<!-- 
+    <div id = "bookShelf" *ngIf="false">
+    <h3 align="center">My Order History</h3><br>
+    <table  class="table table-success table-striped">
+        <tr class="table-success">
+            <th>Order ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Book Title</th>
+            <th>ISBN Code</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Tax</th>
+            <th>Discount</th>
+            <th>Total Amt.</th>
+            <th>Order Date</th>
+            <th>Payment Status</th>
+            <th>Payment Date</th>
+            <th>Review</th>
+        </tr>
+        <tr class="table-success" *ngFor="let o of myOrders">
+            <td>{{o.orderID}}</td>
+            <td>{{o.cust_Name}}</td>
+            <td>{{o.email}}</td>
+            <td>{{o.title}}</td>
+            <td>{{o.isbnCode}}</td>
+            <td>{{o.price | currency:'INR'}}</td>
+            <td>{{o.quantity}}</td>
+            <td>{{o.tax_Amount | currency:'INR'}}</td>
+            <td>{{o.discount_Amount | currency:'INR'}}</td>
+            <td>{{o.amount | currency:'INR'}}</td>
+            <td>{{o.order_Date|date}}</td>
+            <td>{{o.status}}</td>
+            <td>{{o.payment_date|date}}</td>
+            <td id="rating">
+                <form #review="ngForm" (ngSubmit)="formSubmit(review.value.rating,o.bookID)" style="background-color: blanchedalmond;" method="post">
+                <div class="col-md-3" style="width: 80%; background: none; align-items: center; margin: auto;">
+                    <select  class="form-select" id="validationCustom06"  required ngModel name="rating" >
+                      <option selected disabled value="">Choose...</option>
+                        <option value="1">1⭐</option>
+                        <option value="2">2⭐</option>
+                        <option value="3">3⭐</option>
+                        <option value="4">4⭐</option>
+                        <option value="5">5⭐</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid Book Rating.
+                    </div>
+                  </div>
+                  
+                    <input id="myBtn" class="btn btn-outline-dark" value="Post" type="submit" style="height: 10%;  margin: 2px auto; ">
+    
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+ -->
 
 <div class="container"></div>

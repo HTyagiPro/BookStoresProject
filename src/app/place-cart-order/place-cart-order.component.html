@@ -57,14 +57,12 @@
       <tr class="table-success">
         <th>Payment Status</th>
         <td>:</td>
-        <td>{{orderDetails.status}}</td>
+        <td>Pending...</td>
       </tr>
-      <tr class="table-success">
-        <th>Payment Date</th>
-        <td>:</td>
-        <td>{{orderDetails.payment_date|date}}</td>
-      </tr>   
   </table>
+  
+     <input class="add-to-cart-button" id="place"  type="button" (click)="makePayment()" value="Make Payment">
+    
 </div>
 
 <div class="container"></div>

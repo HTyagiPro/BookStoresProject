@@ -18,7 +18,9 @@ export class PlaceCartOrderComponent {
     data: any;
     error:any;
     flag : boolean = false;
-    orderDetails:any;
+    orderDetails:any = {
+      
+    };
 
     public formSubmit(cartOrderForm:NgForm){
       //console.log(cartOrderForm.value);
@@ -27,7 +29,7 @@ export class PlaceCartOrderComponent {
       this.error = JSON.stringify(error.error.text);
       if (error.status == 200)
       {
-        window.alert("Order Placed Successfully.");
+        window.alert("Proceed to make Payment, Redirecting to payment Page...");
         //window.location.reload();
         this.flag = true;
         this.placeCartOrderService.getplacedOrderDetails().subscribe((data:any)=> this.orderDetails = data);
@@ -60,6 +62,10 @@ export class PlaceCartOrderComponent {
         }
       });
       
+    }
+
+    public makePayment(){
+      window.location.href = 'https://rzp.io/l/FBX171M';
     }
 
 }
