@@ -21,7 +21,7 @@ export class AddPublisherComponent {
       if (error.status == 200)
       {
         //window.localStorage.setItem("token", error.error.text);
-        alert("Publisher Added Successfully!!!");
+        alert(error.error.text);
         this.flag = true;
         this.addAuthorService.getAddedPublisher().subscribe((data:any)=> this.publisher= data);
 

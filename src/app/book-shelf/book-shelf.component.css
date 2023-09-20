@@ -166,7 +166,7 @@ a {
     width: 100%;
     margin: auto;
     margin-right: 10%;
-    margin-left: 5%;
+    margin-left: 1%;
     margin-top: auto;
     margin-bottom: auto;
     display: flex;
@@ -175,8 +175,20 @@ a {
     align-items: flex-start;
   }
 
+  #bookDetails #detail1{
+    margin-left: 2px;
+    width: 40%;
+  }
   #bookDetails #detail2{
-    margin-left: 20%;
+    margin-left: 5%;
+    width: 50%;
+  }
+  #bookDetails #detail3{
+    margin-left: 5%;
+    width: fit-content;
+    height: 100%;
+    line-height: 35px;
+
   }
 
   .tile1 #cartButton{
@@ -201,6 +213,15 @@ a {
     background-color: #9CCC65
   }
   
-  
+  h3{
+    text-decoration: solid;
+    font-weight: bolder;
+    font-family: cursive;
+    font-weight: bolder;
+    font-style: oblique;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    text-align: center;
+}
   
   

@@ -24,6 +24,7 @@ export class OrderHistoryComponent implements OnInit {
       this.error = JSON.stringify(error.error.text);
       if (error.status == 200)
       {
+        alert(error.error.text);
        // window.localStorage.setItem("token", error.error.text);
       }else {
         alert("Wrong Credintials.");

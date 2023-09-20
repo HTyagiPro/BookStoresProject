@@ -46,7 +46,8 @@ export class PlaceOrderComponent {
         this.error = JSON.stringify(error.error.text);
         if (error.status == 200)
         {
-          window.localStorage.setItem("token", error.error.text);
+          //window.localStorage.setItem("token", error.error.text);
+          alert(error.error.text);
         }else {
           alert("Wrong Credintials.");
         }

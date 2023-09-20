@@ -27,6 +27,7 @@ export class BookShelfComponent implements OnInit {
 
     public onClickAddToCart(bookId:any){
       this.bookService.addToCart(bookId).subscribe((data)=> this.data = data,error => { 
+        
         this.error = JSON.stringify(error.error.text);
         if (error.status == 200)
         {
@@ -41,11 +42,15 @@ export class BookShelfComponent implements OnInit {
 
     ngOnInit(): void {
       this.isAdmin();
-      this.bookService.getAllBooks().subscribe((data)=> this.books = data,error => { 
+      this.bookService.getAllBooks().subscribe((data)=> this.books = data
+      ,error => { 
         this.error = JSON.stringify(error.error.text);
         if (error.status == 200)
-        {
+        { 
+          
+          
           //window.localStorage.setItem("token", error.error.text);
+          
         }else {
           alert("Wrong Credintials.");
         }

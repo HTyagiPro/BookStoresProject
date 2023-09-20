@@ -16,14 +16,20 @@ export class AddCustomerComponent {
 
   data: any;
   public formSubmit(customerForm:NgForm){
-    this.addCustomerService.addCustomer(customerForm.value).subscribe((data:any)=> {
-      this.data = data;
-
-    },error => { 
+    this.addCustomerService.addCustomer(customerForm.value).subscribe((data:any)=>  this.data = data,
+      error => { 
       if (error.status == 200){
-        this.addCustomerService.getAddedCustomer().subscribe((data:any) => this.customer = data);
-        this.flag = true;
-        alert("Customer Added Successfully!!!");
+        alert(error.error.text);
+        this.addCustomerService.getAddedCustomer().subscribe((data:any) => this.customer = data, error=> { 
+          this.error = JSON.stringify(error.error.text);
+          if (error.status == 200)
+          {
+            this.flag = true;
+            //window.location.reload();
+          }else {
+            alert("Something Went Wrong With Review, Try Again after Sometime...!!!");
+          }
+        });
         
       }
       console.log(error.error.text);

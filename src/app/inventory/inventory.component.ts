@@ -22,7 +22,7 @@ export class InventoryComponent implements OnInit {
     if (error.status == 200)
     {
       
-      window.alert("Inventory Updated Successfully.");
+      alert(error.error.text);
       window.location.reload();
     
     }else {

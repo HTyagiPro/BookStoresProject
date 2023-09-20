@@ -16,17 +16,14 @@ export class AddAuthorComponent {
   author : any;
   public formSubmit(addAuthor:NgForm){
     this.addAuthorService.addAuthor(addAuthor.value).subscribe((data:any)=> this.data = data, 
-    error => { 
+     error=> { 
       this.error = JSON.stringify(error.error.text);
       if (error.status == 200)
       {
-        //window.localStorage.setItem("token", error.error.text);
-        this.flag = true;
-        alert("Author Added Sucessfully");
-        this.addAuthorService.getAddedAuthor().subscribe((data:any)=> this.author = data);
-        //this.route.navigateByUrl('/app-arsenal-box');
+        alert(error.error.text);
+        window.location.reload();
       }else {
-        alert("Wrong Credintials.");
+        alert("Something Went Wrong With Review, Try Again after Sometime...!!!");
       }
     })    
   }

@@ -34,18 +34,20 @@ export class AddBooksComponent {
         if (error.status == 200)
         {
           window.localStorage.setItem("token", error.error.text);
+          alert(error.error.text);
         }else {
           alert("Wrong Credintials.");
         }
       });
       
-      this.addBookService.getAllPublisher().subscribe((data)=> this.publisherArr = data,error => { 
+      this.addBookService.getAllPublisher().subscribe((data)=> this.publisherArr = data, error=> { 
         this.error = JSON.stringify(error.error.text);
         if (error.status == 200)
         {
-          window.localStorage.setItem("token", error.error.text);
+          
+          //window.location.reload();
         }else {
-          alert("Wrong Credintials.");
+          alert("Something Went Wrong With Review, Try Again after Sometime...!!!");
         }
       });
     }

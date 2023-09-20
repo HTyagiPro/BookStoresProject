@@ -14,14 +14,14 @@ export class NevbarComponent implements OnInit {
  {}
   ngOnInit(): void {
     
-    if(window.localStorage.getItem('isAdmin') == '1$1#') {
-      // show
+    if(window.sessionStorage.getItem('isAdmin') == '1$1#') {
       this.showAdmin = true;
     } else {}
   }
   logout() {
     window.alert('logged out');
     window.localStorage.clear();
+    window.sessionStorage.clear();
     this.route.navigateByUrl('/');
   }
 

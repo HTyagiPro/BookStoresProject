@@ -17,12 +17,13 @@ export class ArsenalBoxComponent implements OnInit {
   isAdmin() {
     this.nevService.getAdmin().subscribe((res)=>{
       
-      console.log(res);
+      //console.log(res);
       
       
     },error => { 
       if (error.status == 200) {
-        window.localStorage.setItem("isAdmin", error.error.text);
+        window.sessionStorage.setItem("isAdmin", error.error.text);
+        
       }
     });
 

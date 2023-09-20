@@ -43,6 +43,7 @@ export class CartComponent implements OnInit,OnChanges {
       if (error.status == 200)
       {
         //window.localStorage.setItem("token", error.error.text);
+        alert(error.error.text);
       }else {
         alert("Wrong Credintials.");
       }

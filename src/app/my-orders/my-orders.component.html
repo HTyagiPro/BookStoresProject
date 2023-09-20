@@ -127,7 +127,7 @@
               </div>
             </form>
             <div id="return">
-                <input type="button" class="add-to-cart-button2" value="Return" (click)="applyReturn(b.orderID, b.bookID)">
+                <input type="button" class="add-to-cart-button2" value="Return" (click)="applyReturn(b.orderID, b.bookID)" *ngIf="b.status != 'Refund_Init.'">
             </div>
         </div>
     </div>

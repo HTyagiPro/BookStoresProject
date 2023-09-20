@@ -29,7 +29,8 @@ export class PlaceCartOrderComponent {
       this.error = JSON.stringify(error.error.text);
       if (error.status == 200)
       {
-        window.alert("Proceed to make Payment, Redirecting to payment Page...");
+        alert(error.error.text);
+        //window.alert("Proceed to make Payment, Redirecting to payment Page...");
         //window.location.reload();
         this.flag = true;
         this.placeCartOrderService.getplacedOrderDetails().subscribe((data:any)=> this.orderDetails = data);
@@ -46,7 +47,8 @@ export class PlaceCartOrderComponent {
         this.error = JSON.stringify(error.error.text);
         if (error.status == 200)
         {
-          window.localStorage.setItem("token", error.error.text);
+          window.sessionStorage.setItem("token", error.error.text);
+          alert(error.error.text);
         }else {
           alert("Wrong Credintials.");
         }
@@ -57,6 +59,7 @@ export class PlaceCartOrderComponent {
         if (error.status == 200)
         {
           //window.localStorage.setItem("token", error.error.text);
+          alert(error.error.text);
         }else {
           alert("Wrong Credintials.");
         }
