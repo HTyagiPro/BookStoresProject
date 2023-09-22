@@ -16,7 +16,8 @@ export class AuthGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     // Check for the presence of a token in local storage
     const token = localStorage.getItem('token');
-    if (token) {
+    const tokens = sessionStorage.getItem('token');
+    if (tokens) {
       // You can also check the token's validity here, e.g., by decoding and verifying it
       // For simplicity, we'll assume it's valid if it exists
       return true;

@@ -22,8 +22,8 @@ export class ArsenalBoxComponent implements OnInit {
       
     },error => { 
       if (error.status == 200) {
+        window.localStorage.setItem("isAdmin", error.error.text);
         window.sessionStorage.setItem("isAdmin", error.error.text);
-        
       }
     });
 

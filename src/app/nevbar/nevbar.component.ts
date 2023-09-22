@@ -19,7 +19,7 @@ export class NevbarComponent implements OnInit {
     } else {}
   }
   logout() {
-    window.alert('logged out');
+    window.alert('Logged Out, Thanks for visit...');
     window.localStorage.clear();
     window.sessionStorage.clear();
     this.route.navigateByUrl('/');
