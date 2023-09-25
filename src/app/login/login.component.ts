@@ -22,7 +22,7 @@ export class LoginComponent {
         window.localStorage.setItem("token", error.error.text);
         window.sessionStorage.setItem("token", error.error.text);
         this.route.navigateByUrl('/app-arsenal-box');
-        alert("Hello! Welcome to .Arsenal Book Store")
+        alert("Hello! Welcome to .Arsenal Book Store");
       }else {
         alert("Wrong Credintials.");
       }

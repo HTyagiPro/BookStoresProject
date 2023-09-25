@@ -51,14 +51,19 @@
 
               <!--Log In Sign Up-->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="loggedIn == false">
                   LogIn/SignUp
                 </a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="loggedIn == true">
+                  Log Out
+                </a>
+
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/" >User Log In </a></li>
-                  <li><a class="dropdown-item" href="/app-add-customer">Customer Reg.?</a></li>
-                  <li><a class="dropdown-item" href="/" (click)="logout()">Log Out</a></li>
-                  <li><hr class="dropdown-divider"></li>      
+                  <li><a class="dropdown-item" href="/" *ngIf="loggedIn == false" >User Log In </a></li>
+                  <li><a class="dropdown-item" href="/app-add-customer"  *ngIf="loggedIn == false">Customer Reg.?</a></li>
+                  <li><hr class="dropdown-divider"></li>    
+                  <li><a class="dropdown-item" href="/" (click)="logout()" *ngIf="loggedIn == true">Log Out</a></li>
+                    
                 </ul>
               </li>
               <!---->
