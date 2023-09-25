@@ -23,6 +23,7 @@ export class AddBooksComponent {
         this.data = data
       },error => { 
         console.log(error.error.text);
+        alert(error.error.text);
         console.log(error.status);
       });
     }
