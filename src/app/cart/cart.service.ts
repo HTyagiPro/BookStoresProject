@@ -16,8 +16,6 @@ export class CartService{
 
     public updateCartItems(updateForm:any): Observable<any>{
         var header = new HttpHeaders().set("Authorization", "Bearer " + window.localStorage.getItem("token"));
-        console.log(updateForm.value);
-        
         return this.httpClient.post("http://localhost:8089/cart-items/updateItemToCart", updateForm, {headers:header});
     }
 

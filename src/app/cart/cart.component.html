@@ -49,7 +49,7 @@
                 <strong>
                     Book Condition : 
                 </strong>
-                {{b.book.bookCondition}}</p>
+                {{b.conditions}}</p>
         </div>
         <div id="detail3">
             <p>
@@ -81,14 +81,20 @@
     </div>
     <div class="lastCol">
         <div id="cartButton">
-            <input type="button" class="add-to-cart-button2" value="Delete" (click)="onClickDeleteFromCart(b.book.bookID)">
+            <input type="button" class="add-to-cart-button2" value="Delete" (click)="onClickDeleteFromCart(b.book.bookID, b.conditions)">
         </div>
         <div id="payable">
-            <p>
+            <p *ngIf="b.conditions == 'New'">
                 <strong>
                     Payable: 
                 </strong>
                 {{b.quantity * b.book.price + b.book.price * 0.18 - b.book.price * 0.1 | currency : 'INR'}}
+            </p>
+            <p *ngIf="b.conditions == 'Used'">
+                <strong>
+                    Payable: 
+                </strong>
+                {{b.quantity * b.book.price + b.book.price * 0.18 - b.book.price * 0.2 | currency : 'INR'}}
             </p>
         </div>
         <div id="checkoutCartButton">

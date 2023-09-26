@@ -17,11 +17,16 @@ export class CartComponent implements OnInit,OnChanges {
    ngOnChanges(changes: SimpleChanges): void {
     
   }
-   public onClickDeleteFromCart(bookID:any){
+   public onClickDeleteFromCart(bookID:any, condition:any){
+    // console.log(condition);
+    
     const updateForm = {
-      bookID:''
+      bookID:'',
+      condition:''
     }
     updateForm.bookID = JSON.stringify(bookID);
+    updateForm.condition = condition;
+    // console.log(updateForm);
     
     this.cartService.updateCartItems(updateForm).subscribe((data) => this.data = data, error=> { 
       this.error = JSON.stringify(error.error.text);

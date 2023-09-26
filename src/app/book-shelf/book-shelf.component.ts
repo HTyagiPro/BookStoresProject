@@ -25,12 +25,14 @@ export class BookShelfComponent implements OnInit {
   data:any;
     constructor(private bookService: BookService, private router:Router, private activeRoute:ActivatedRoute,private navService:NavbarService){}
 
-    public onClickAddToCart(bookId:any){
-      this.bookService.addToCart(bookId).subscribe((data)=> this.data = data,error => { 
+    public onClickAddToCart(bookId:any, condition:any){
+      this.bookService.addToCart(bookId, condition).subscribe((data)=> this.data = data,error => { 
         
         this.error = JSON.stringify(error.error.text);
         if (error.status == 200)
         {
+          console.log(condition);
+          
           alert("Item Added to cart.")
           //window.localStorage.setItem("token", error.error.text);
         }else {

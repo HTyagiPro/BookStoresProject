@@ -16,9 +16,9 @@ export class BookService{
         return this.httpClient.get("http://localhost:8089/books",{headers:header});
     }
 
-    public addToCart(bookId:any): Observable<any>{
+    public addToCart(bookId:any, condition:any): Observable<any>{
         var header = new HttpHeaders().set("Authorization", "Bearer " + window.localStorage.getItem("token"));
-        return this.httpClient.post("http://localhost:8089/cart-items/addToCart", {"bookID":bookId}, {headers:header});
+        return this.httpClient.post("http://localhost:8089/cart-items/addToCart", {"bookID":bookId, "condition":condition}, {headers:header});
     }
 
     

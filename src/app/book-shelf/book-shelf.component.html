@@ -67,11 +67,23 @@
 
         </div>
     </div>
+    <div class="actions">
+        <div class="col-md-3" id="condition">
+            <label for="validationCustom06" class="form-label"><strong>Condition:</strong></label>
+            <select class="form-select" id="validationCustom06" required #condition >
+            <option selected disabled value="">Choose...</option>
+                <option value="New">New</option>
+                <option value="Used">Used</option>
+            </select>
+            <div class="invalid-feedback">
+            Please select a valid Book Condition.
+            </div>
+        </div>
 
-    <div id="cartButton">
-        <input type="button" class="add-to-cart-button" value="Add To Cart" (click)="onClickAddToCart(b.bookID)">
+        <div id="cartButton">
+            <input type="submit" class="add-to-cart-button" value="Add To Cart" (click)="onClickAddToCart(b.bookID, condition.value)">
+        </div>
     </div>
-
 </div>
 
 
