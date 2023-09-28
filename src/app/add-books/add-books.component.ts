@@ -22,9 +22,14 @@ export class AddBooksComponent {
       this.addBookService.addBook(bookForm.value).subscribe((data:any)=> {
         this.data = data
       },error => { 
-        console.log(error.error.text);
-        alert(error.error.text);
-        console.log(error.status);
+        this.error = JSON.stringify(error.error.text);
+        if (error.status == 200)
+        {
+          //window.localStorage.setItem("token", error.error.text);
+          alert(error.error.text);
+        }else {
+          alert("Something Went Wrong.");
+        }
       });
     }
 
@@ -37,7 +42,7 @@ export class AddBooksComponent {
           window.localStorage.setItem("token", error.error.text);
           alert(error.error.text);
         }else {
-          alert("Wrong Credintials.");
+          alert("Something Went Wrong.");
         }
       });
       
@@ -45,10 +50,10 @@ export class AddBooksComponent {
         this.error = JSON.stringify(error.error.text);
         if (error.status == 200)
         {
-          
+          alert(error.error.text);
           //window.location.reload();
         }else {
-          alert("Something Went Wrong With Review, Try Again after Sometime...!!!");
+          alert(error.error.text);
         }
       });
     }
