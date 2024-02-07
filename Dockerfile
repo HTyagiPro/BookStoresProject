@@ -13,6 +13,10 @@ RUN npm install -g @angular/cli
 # Install project dependencies
 RUN npm install
 
+# Fix permissions to avoid permission denied errors
+RUN mkdir -p /app/.angular
+RUN chmod -R 777 /app
+
 # Copy the rest of your application code to the container
 COPY . .
 
