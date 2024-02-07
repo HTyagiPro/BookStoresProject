@@ -1,5 +1,5 @@
 # Use an official Node.js image as a parent image
-FROM node:16
+FROM node:18
 
 # Set the working directory within the container
 WORKDIR /app
