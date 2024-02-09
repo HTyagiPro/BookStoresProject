@@ -21,7 +21,7 @@ RUN chmod -R 777 /app
 COPY . .
 
 # Build Angular app
-RUN npm run build -- --prod
+RUN npm run build
 
 # Use NGINX image as production server
 FROM nginx:alpine
