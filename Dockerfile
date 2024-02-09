@@ -26,9 +26,6 @@ RUN npm run build
 # Use NGINX image as production server
 FROM nginx:alpine
 
-# Copy built Angular app from build stage
-COPY --from=build /usr/src/app/dist/* /usr/share/nginx/html/
-
 # Expose port
 EXPOSE 80
 
