@@ -1,5 +1,5 @@
 # Use an official Node.js image as a parent image
-FROM node:18 AS build
+FROM node:18
 
 # Set the working directory within the container
 WORKDIR /app
@@ -20,21 +20,8 @@ RUN chmod -R 777 /app
 # Copy the rest of your application code to the container
 COPY . .
 
-# Build Angular app
-RUN npm run build
-
-# Use NGINX image as production server
-FROM nginx:alpine
-
-# Expose port
-EXPOSE 80
-
-# Command to run NGINX
-CMD ["nginx", "-g", "daemon off;"]
-
-
 # Expose the port your application will run on
-# EXPOSE 4200
+EXPOSE 4200
 
 # Command to start your application
 CMD ["ng", "serve", "--host", "0.0.0.0"]
